@@ -6,9 +6,9 @@ router.route("/")
     .get(groceryController.findAll)
 //   .post(booksController.create);
 
-// Matches with "/api/grocery/:id"
-router.route("/:id")
-// .get(groceryController.findById)
+// Matches with "/api/grocery/:category"
+router.route("/:category")
+    .get(groceryController.findByCategory)
 // .put(groceryController.update)
 // .delete(groceryController.remove);
 

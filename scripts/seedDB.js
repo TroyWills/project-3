@@ -40,6 +40,12 @@ const grocerySeed = [
     category: "produce",
     quantity: 10
   },
+  {
+    name: "Milk",
+    price: 2.99,
+    category: "dairy",
+    quantity: 10
+  }
 
 ];
 
