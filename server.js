@@ -19,6 +19,6 @@ app.use(routes);
 mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://project3:school@cluster0.c0tac.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
