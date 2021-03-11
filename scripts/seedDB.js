@@ -5,15 +5,15 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/grocerylist"
 );
 
 
 const grocerySeed = [
   {
-    name:"Onion",
+    name: "Onion",
     price: 1.99,
-    category:"produce",
+    category: "produce",
     quantity: 10
   },
   {
@@ -35,12 +35,12 @@ const grocerySeed = [
     quantity: 10
   },
   {
-    name: "Tomatos",
+    name: "Tomatoes",
     price: 1.50,
     category: "produce",
     quantity: 10
   },
-  
+
 ];
 
 db.Grocery

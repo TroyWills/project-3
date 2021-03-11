@@ -7,8 +7,7 @@ router.route("/")
 //   .post(booksController.create);
 
 // Matches with "/api/grocery/:id"
-router
-    .route("/:id")
+router.route("/:id")
 // .get(groceryController.findById)
 // .put(groceryController.update)
 // .delete(groceryController.remove);
