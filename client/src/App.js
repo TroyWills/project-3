@@ -8,17 +8,17 @@ function App() {
     <div>
       {/* insert wrappers inside of Auth0Provider */}
       <Auth0Provider
-      
+
     domain= {process.env.DOMAIN}
     clientId={process.env.CLIENT_ID}
     redirectUri={window.location.origin}
   >
           <Navbar/>
   </Auth0Provider>
+      <Navbar/>
     </div>
   );
 }
 
 export default App;
-
 
