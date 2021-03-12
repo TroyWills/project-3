@@ -46,7 +46,9 @@ const grocerySeed = [
     category: "dairy",
     quantity: 10
   }
+  
 
+  
 ];
 
 db.Grocery
