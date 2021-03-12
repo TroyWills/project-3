@@ -2,6 +2,7 @@
 import './App.css';
 import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
+import LoginButton from './components/Footer';
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
     redirectUri={window.location.origin}
   >
           <Navbar/>
+          <footer>
+          <LoginButton/>
+          </footer>
   </Auth0Provider>
-      <Navbar/>
     </div>
   );
 }
