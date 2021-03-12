@@ -15,7 +15,7 @@ function App() {
   >
           <Navbar/>
   </Auth0Provider>
-      <Navbar/>
+      
     </div>
   );
 }
