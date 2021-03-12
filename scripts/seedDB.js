@@ -80,8 +80,43 @@ const grocerySeed = [
     category: "dairy",
     quantity: 10,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-17hIlqRR8Dda-lSGaV4rWQxZdXu0Vr2n3wJzr4KP5Ghk_nS7&s"
-  }
-  
+  },
+  {
+    name: "Potato Chips",
+    price: 2.50,
+    category: "snacks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0DfrWe8zpQCl6bgsgn-y2d1cjUQjvwT73nTesFByvERhv28&s"
+  },
+  {
+    name: "Chocolate Chip Cookies",
+    price: 1.99,
+    category: "snacks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAIaJGaTCn7FEW2zsHT5EAkt5ZZyuQviNAaOVjEY-EJMsQW0&s"
+  },
+  {
+    name: "PopCorn ",
+    price: 2.99,
+    category: "snacks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz70fpfrAOhHs5_jSJxftxJOPjnhASejJc56HXQoJQvi6mEx3W&s"
+  },
+  {
+    name: "Chexmix",
+    price: 2.99,
+    category: "snacks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrS9JYO0xkcKDH5Ny_fbSXPRynWZdohRtgPkCLuTVT0xuJSnnt&s"
+  },
+  {
+    name: "Fruit Snack",
+    price: 2.99,
+    category: "snacks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUJVdtYIShOwCzj9KyPja-xQrBqWqMp801kx00CpT9u1PKp_n6&s"
+
+  }  
 ];
 
 db.Grocery
