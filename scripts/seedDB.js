@@ -116,7 +116,47 @@ const grocerySeed = [
     quantity: 10,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUJVdtYIShOwCzj9KyPja-xQrBqWqMp801kx00CpT9u1PKp_n6&s"
 
-  }  
+  },  
+  {
+    name: "Water",
+    price: 2.99,
+    category: "drinks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ-aSJfC7v9OiP8jSeYgb4ymND9GwPuLvbg9OHAPmQTBeBhcRK&s"
+
+  },
+  {
+    name: "Pepsi",
+    price: 2.99,
+    category: "drinks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSueRHhUHbaVXge8ZOyXaa7yoSampgTQdLGSuAMZTJl9apq84Bt&s"
+
+  },
+  {
+    name: "Red Bull",
+    price: 2.99,
+    category: "drinks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpMnKOqsqQ1iFllGdOA83jbx2132cVlyJGUEjcSzuniCPIKA7U&s"
+
+  },
+  {
+    name: "Sprite",
+    price: 2.99,
+    category: "drinks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7TjMpWHa8Islj6rG8aJHHIpInDQpT-emReSMZw977LeQnUd2&s"
+
+  },
+  {
+    name: "Orange Juice",
+    price: 2.99,
+    category: "drinks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtMR49nixhIVgNVKpggT7K5aClT6h9swba2GaOLgebCZNaqA&s"
+
+  }
 ];
 
 db.Grocery
