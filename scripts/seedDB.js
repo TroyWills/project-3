@@ -156,6 +156,45 @@ const grocerySeed = [
     quantity: 10,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtMR49nixhIVgNVKpggT7K5aClT6h9swba2GaOLgebCZNaqA&s"
 
+  },
+  {
+    name: "Toliet Paper",
+    price: 2.99,
+    category: "personal",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTFiCvOKgXJr8IrP8TIu-ASTs4qeGNeeTFw3S28l4KsoQzhpY&s"
+
+  },
+  {
+    name: "Deodrant",
+    price: 2.99,
+    category: "personal",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ_CS5tAe-FvuI77NEv0mImbtXUD68jd14SgO3g27WcifTi44&s"
+  },
+  {
+    name: "Toothpaste",
+    price: 2.99,
+    category: "personal",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60gfGvzUf6z4zRMZ_qd7ficTR8gREq_aecNxZFN1_TmAuLbo&s"
+
+  },
+  {
+    name: "Body Wash",
+    price: 2.99,
+    category: "personal",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTshC_PDzbnlfoNN0bLq3gfUmHPn28yoHr_OI46kt2WpBymXcUQ&s"
+
+  },
+  {
+    name: "Tooth Brush",
+    price: 2.99,
+    category: "personal",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjhxPUBuQV25U6ezDYhkmtdHx0FUCNU2W-lvkz0_dlpbEwvCc&s"
+
   }
 ];
 
