@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
 import LoginButton from './components/Footer';
+import Home from "./pages/Home/home"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <LoginButton/>
           </footer>
   </Auth0Provider>
+  <Home/>
     </div>
   );
 }
