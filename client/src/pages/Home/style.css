@@ -1,0 +1,18 @@
+.body {
+    text-align: center;
+    margin: 80px;
+  }
+  .heading {
+    font-size: 50px;
+  }
+  
+  .item {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    padding-top: 100px;
+    margin:15px;
+    width: 150px;
+    
+  }
+  
