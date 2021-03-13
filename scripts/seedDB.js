@@ -14,39 +14,188 @@ const grocerySeed = [
     name: "Onion",
     price: 1.99,
     category: "produce",
-    quantity: 10
+    quantity: 10,
+    img:"http://clipart-library.com/image_gallery2/Onion-PNG-File.png"
   },
   {
     name: "Banana",
     price: 0.99,
     category: "produce",
-    quantity: 10
+    quantity: 10,
+    img: "http://clipart-library.com/image_gallery2/Banana.png"
   },
   {
     name: "Asparagus",
     price: 2.99,
     category: "produce",
-    quantity: 10
+    quantity: 10,
+    img: "http://clipart-library.com/newhp/bunch-of-asparagus-sutcliffe-farms-vegetarian-cuisine-asparagus.jpg"
   },
   {
-    name: "Kale",
+    name: "Strawberry",
     price: 3.99,
     category: "produce",
-    quantity: 10
+    quantity: 10,
+    img: "http://clipart-library.com/image_gallery2/Strawberry-Download-PNG.png"
   },
   {
     name: "Tomatoes",
     price: 1.50,
     category: "produce",
-    quantity: 10
+    quantity: 10,
+    img: "http://clipart-library.com/images_k/tomato-transparent/tomato-transparent-3.jpg"
   },
   {
     name: "Milk",
     price: 2.99,
     category: "dairy",
-    quantity: 10
-  }
+    quantity: 10,
+    img: "http://clipart-library.com/images_k/milk-clipart-transparent/milk-clipart-transparent-17.jpg"
 
+  },
+  {
+    name: "Yogurt",
+    price: 2.99,
+    category: "dairy",
+    quantity: 10,
+    img: "http://clipart-library.com/data_images/472474.png"
+  },
+  {
+    name: "Cheese",
+    price: 2.99,
+    category: "dairy",
+    quantity: 10,
+    img: "http://clipart-library.com/new_gallery/124-1240630_block-of-butter-png-cheddar-cheese-block-png.png"
+  },
+  {
+    name: "Butter",
+    price: 2.99,
+    category: "dairy",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4AxQnXMDg9na5lu8l6jUHWCV-4cp07N7uTvKceLnw5fhTNzY&s"
+  },
+  {
+    name: "Ice Cream",
+    price: 2.99,
+    category: "dairy",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-17hIlqRR8Dda-lSGaV4rWQxZdXu0Vr2n3wJzr4KP5Ghk_nS7&s"
+  },
+  {
+    name: "Potato Chips",
+    price: 2.50,
+    category: "snacks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0DfrWe8zpQCl6bgsgn-y2d1cjUQjvwT73nTesFByvERhv28&s"
+  },
+  {
+    name: "Chocolate Chip Cookies",
+    price: 1.99,
+    category: "snacks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAIaJGaTCn7FEW2zsHT5EAkt5ZZyuQviNAaOVjEY-EJMsQW0&s"
+  },
+  {
+    name: "PopCorn ",
+    price: 2.99,
+    category: "snacks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz70fpfrAOhHs5_jSJxftxJOPjnhASejJc56HXQoJQvi6mEx3W&s"
+  },
+  {
+    name: "Chexmix",
+    price: 2.99,
+    category: "snacks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrS9JYO0xkcKDH5Ny_fbSXPRynWZdohRtgPkCLuTVT0xuJSnnt&s"
+  },
+  {
+    name: "Fruit Snack",
+    price: 2.99,
+    category: "snacks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUJVdtYIShOwCzj9KyPja-xQrBqWqMp801kx00CpT9u1PKp_n6&s"
+
+  },  
+  {
+    name: "Water",
+    price: 2.99,
+    category: "drinks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ-aSJfC7v9OiP8jSeYgb4ymND9GwPuLvbg9OHAPmQTBeBhcRK&s"
+
+  },
+  {
+    name: "Pepsi",
+    price: 2.99,
+    category: "drinks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSueRHhUHbaVXge8ZOyXaa7yoSampgTQdLGSuAMZTJl9apq84Bt&s"
+
+  },
+  {
+    name: "Red Bull",
+    price: 2.99,
+    category: "drinks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpMnKOqsqQ1iFllGdOA83jbx2132cVlyJGUEjcSzuniCPIKA7U&s"
+
+  },
+  {
+    name: "Sprite",
+    price: 2.99,
+    category: "drinks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7TjMpWHa8Islj6rG8aJHHIpInDQpT-emReSMZw977LeQnUd2&s"
+
+  },
+  {
+    name: "Orange Juice",
+    price: 2.99,
+    category: "drinks",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtMR49nixhIVgNVKpggT7K5aClT6h9swba2GaOLgebCZNaqA&s"
+
+  },
+  {
+    name: "Toliet Paper",
+    price: 2.99,
+    category: "personal",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTFiCvOKgXJr8IrP8TIu-ASTs4qeGNeeTFw3S28l4KsoQzhpY&s"
+
+  },
+  {
+    name: "Deodrant",
+    price: 2.99,
+    category: "personal",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ_CS5tAe-FvuI77NEv0mImbtXUD68jd14SgO3g27WcifTi44&s"
+  },
+  {
+    name: "Toothpaste",
+    price: 2.99,
+    category: "personal",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60gfGvzUf6z4zRMZ_qd7ficTR8gREq_aecNxZFN1_TmAuLbo&s"
+
+  },
+  {
+    name: "Body Wash",
+    price: 2.99,
+    category: "personal",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTshC_PDzbnlfoNN0bLq3gfUmHPn28yoHr_OI46kt2WpBymXcUQ&s"
+
+  },
+  {
+    name: "Tooth Brush",
+    price: 2.99,
+    category: "personal",
+    quantity: 10,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjhxPUBuQV25U6ezDYhkmtdHx0FUCNU2W-lvkz0_dlpbEwvCc&s"
+
+  }
 ];
 
 db.Grocery
