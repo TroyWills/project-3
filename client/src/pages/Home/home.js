@@ -37,6 +37,7 @@ const Home = () => {
             // height={product.height}
         
           />
+          
         );
       })}
       </div>
