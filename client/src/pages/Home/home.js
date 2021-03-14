@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     getProducts();
     console.log(products)
-  });
+  }, []);
 
   const getProducts = async () => {
     await fetch("/api/grocery")
@@ -18,28 +18,28 @@ const Home = () => {
   };
   return (
     <>
-    <div className="body">
-      <div className="heading">The Mini Mart</div>
-    {/* sections that show categories */}
-    {/* <h1>Produce */}
-    {/* filter out proudcts that only have the category produce and render it */}
-    {/* {products} */}
-    {/* {products.filter(products => product.category == 'produce')} */}
-      <div className="items"></div>
-      {products && products.map((product) => {
-        return (
-          <Item
-            img={product.img}
-            name={product.name}
-            description={product.description}
-            price={product.price}
-            width={product.width}
+      <div className="body">
+        <div className="heading">The Mini Mart</div>
+        {/* sections that show categories */}
+        {/* <h1>Produce */}
+        {/* filter out proudcts that only have the category produce and render it */}
+        {/* {products} */}
+        {/* {products.filter(products => product.category == 'produce')} */}
+        <div className="items"></div>
+        {products && products.map((product) => {
+          return (
+            <Item
+              img={product.img}
+              name={product.name}
+              description={product.description}
+              price={product.price}
+              width={product.width}
             // height={product.height}
-        
-          />
-          
-        );
-      })}
+
+            />
+
+          );
+        })}
       </div>
     </>
   );
