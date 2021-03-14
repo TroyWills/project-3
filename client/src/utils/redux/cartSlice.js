@@ -35,6 +35,9 @@ export const removeFromCart = (state, name) => {
 export const getItemQuantity = (state, name) =>
   state.cart.find((item) => item.name === name)?.quantity ?? 0;
 
+export const getNumOfItemsInCart = (state) =>
+  state.cart.reduce((accum, currItem) => accum + currItem.quantity, 0);
+
 const { actions, reducer } = cartSlice;
 
 export const { AddToCart, UpdateQuantity, RemoveFromCart } = actions;

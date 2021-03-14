@@ -14,4 +14,16 @@
 }
 .cart {
   padding: 0px 20px;
+  margin-right: 6px;
+}
+
+.cart_icon {
+  position: absolute;
+  right: 1353px;
+  top: 5px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 0.125rem;
 }
