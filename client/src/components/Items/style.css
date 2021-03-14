@@ -1,6 +1,8 @@
 .item {
+
     margin: 20px;
     width: 150px;
+    flex-direction: row;
     background-color:#f3ebe7;
 
 }
@@ -10,11 +12,11 @@
     padding: 7px;
   }
   
-  .quantity_updater {
+  /* .quantity_updater {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+  } */
 
   /* img{
     visibility: visible;

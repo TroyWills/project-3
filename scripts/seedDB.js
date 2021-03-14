@@ -32,7 +32,7 @@ const grocerySeed = [
     price: 2.99,
     category: "produce",
     quantity: 10,
-    img: "http://clipart-library.com/newhp/bunch-of-asparagus-sutcliffe-farms-vegetarian-cuisine-asparagus.jpg",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6o2M70XpeggT0lpDA-ZVFCdFL9RZeU2TbSUfiSSCCtRzJAgk&s",
     width: "110px",
   },
   {

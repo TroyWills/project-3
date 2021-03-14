@@ -11,16 +11,13 @@ function App() {
       {/* insert wrappers inside of Auth0Provider */}
       <Auth0Provider
 
-    domain= {process.env.DOMAIN}
-    clientId={process.env.CLIENT_ID}
-    redirectUri={window.location.origin}
-  >
-          <Navbar/>
-          <footer>
-          <LoginButton/>
-          </footer>
-  </Auth0Provider>
-  <Home/>
+        domain={process.env.DOMAIN}
+        clientId={process.env.CLIENT_ID}
+        redirectUri={window.location.origin}
+      >
+        <Navbar />
+      </Auth0Provider>
+      <Home />
     </div>
   );
 }

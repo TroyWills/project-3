@@ -5,14 +5,29 @@
   .heading {
     font-size: 50px;
   }
-  
-  .item {
+  .items {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     /* justify-content: space-between; */
     flex-wrap: wrap;
-    padding-top: 100px;
+    width: 70%;
+}
+  
+  .item {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    /* align-items: center;
+    justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    /* padding-top: 100px; */
     margin:15px;
     width: 150px;
+    height: 300px;
+    background-color: transparent !important;
+    border: none !important;
+   
     
   }
   
