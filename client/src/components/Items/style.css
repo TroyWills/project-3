@@ -1,36 +1,4 @@
 .item {
-
-    margin: 20px;
-    width: 150px;
-    flex-direction: row;
-    background-color:#f3ebe7;
-
+  margin: 20px;
+  width: 150px;
 }
-
-  .addToCart {
-    background-color: #f3ebe7;
-    padding: 7px;
-  }
-  
-  /* .quantity_updater {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  } */
-
-  /* img{
-    visibility: visible;
-    position: absolute;
-    inset: 0px;
-    box-sizing: border-box;
-    padding: 0px;
-    border: none;
-    margin: auto;
-    display: block;
-    width: 0px;
-    height: 0px;
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
-  } */

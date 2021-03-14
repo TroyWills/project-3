@@ -2,7 +2,7 @@
 import './App.css';
 import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
-import LoginButton from './components/Footer';
+// import LoginButton from './components/Footer';
 import Home from "./pages/Home/home"
 
 function App() {
