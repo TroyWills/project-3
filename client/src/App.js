@@ -22,6 +22,7 @@ function App() {
           <Navbar />
           <Home />
               <Cart/>
+
         </Provider>
       </Auth0Provider>
     </div>
