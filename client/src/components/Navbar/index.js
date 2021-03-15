@@ -1,14 +1,33 @@
 import React from "react";
-import './navbar.css';
-import shoppingCart from "./shopping-cart.png"
+import "./navbar.css";
+import { useAuth0 } from "@auth0/auth0-react";
+import { ShoppingCart } from "react-feather";
+import { useSelector } from "react-redux";
+import { getNumOfItemsInCart } from "../../utils/redux/cartSlice";
 
 function Navbar() {
+  const { isAuthenticated, loginWithPopup } = useAuth0();
+
+  const numOfItemsInCart = useSelector(getNumOfItemsInCart);
+
+  console.log(numOfItemsInCart);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
-        <a className="navbar-brand" id="name" href="#">The Mini Mart</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          The Mini Mart
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
@@ -28,7 +47,7 @@ function Navbar() {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <li>
-                  <a class="dropdown-item" href="/cart">
+                  <a class="dropdown-item" href="#">
                     Produce
                   </a>
                 </li>
@@ -55,28 +74,26 @@ function Navbar() {
               </ul>
             </li>
             {!isAuthenticated && (
-              <li className="nav-item">
-                <a className="nav-link" href="#" onClick={loginWithPopup}>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onClick={loginWithPopup}>
                   Login
                 </a>
               </li>
             )}
-            <div className="cart" onclick='/cart'>
-              <a className="nav-link" href="/cart">
-                <ShoppingCart />
-                {numOfItemsInCart > 0 && (
-                  <button className="cart_icon" onclick='/cart'>{numOfItemsInCart}</button >
-                )}
+            <div className="cart">
+              <ShoppingCart />
+              {numOfItemsInCart > 0 && (
+                <div className="cart_icon">{numOfItemsInCart}</div>
+              )}
             </div>
           </ul>
-            <div>
-              <img href="cart.js" className="nav-link" id="shopCart" src={shoppingCart} />
-            </div>
         </div>
-        </div>
-    </nav >
+      </div>
+    </nav>
   );
 }
 
 export default Navbar;
+
+
 
