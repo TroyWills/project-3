@@ -1,10 +1,9 @@
-const express = require('express')
+// const express = require('express')
 
-const paymentRouter = express.Router()
 const stripe = require('stripe')(process.env.SECRET_TEST_APIKEY);
 
-paymentRouter.post('/', async (req, res) => {
-
+async function paymentRouter(req, res) {
+    console.log(req.body.token)
     try {
         console.log('route hit')
         let { status } = await stripe.charges.create({
@@ -18,6 +17,6 @@ paymentRouter.post('/', async (req, res) => {
         console.log('router not hit')
         res.status(500).end()
     }
-})
+}
 
 module.exports = paymentRouter

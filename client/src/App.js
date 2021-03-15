@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import { Elements } from 'react-stripe-elements'
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
@@ -7,7 +8,6 @@ import Home from "./pages/Home/home";
 import { Provider } from "react-redux";
 import { store } from "./utils/redux/store";
 require('dotenv').config();
-import CheckoutForm from "./CheckoutForm"
 
 
 function App() {
@@ -20,10 +20,12 @@ function App() {
         redirectUri={window.location.origin}
       >
         <Provider store={store}>
-          <CheckoutForm />
           <Navbar />
           <Home />
-          <Cart />
+          <Elements>
+            <Cart />
+          </Elements>
+
 
         </Provider>
       </Auth0Provider>
