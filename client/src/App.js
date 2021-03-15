@@ -2,7 +2,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
-import LoginButton from './components/Footer';
 import Cart from "./pages/cart"
 import Home from "./pages/Home/home";
 import { Provider } from "react-redux";
@@ -21,8 +20,6 @@ function App() {
           <Navbar />
           <Home />
           <Cart />
-          <footer />
-          <LoginButton />
         </Provider>
       </Auth0Provider>
     </div>
