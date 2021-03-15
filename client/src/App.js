@@ -2,15 +2,17 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
-import Cart from "./pages/cart"
+import Cart from "./pages/shopping-cart/cart"
 import Home from "./pages/Home/home";
+import Admin from "./pages/admin"
 import { Provider } from "react-redux";
 import { store } from "./utils/redux/store";
-require('dotenv').config();
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 function App() {
   return (
+    <Router>
     <div>
       {/* insert wrappers inside of Auth0Provider */}
       <Auth0Provider
@@ -21,11 +23,15 @@ function App() {
         <Provider store={store}>
           <Navbar />
           <Home />
-              <Cart/>
+
 
         </Provider>
+        <Route exact path="/" component={Home} />
+          <Route exact path= "/cart" component={Cart} />
+          <Route exact path= "/admin" component={Admin} />
       </Auth0Provider>
     </div>
+    </Router>
   );
 }
 
