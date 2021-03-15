@@ -9,6 +9,8 @@ const PORT = process.env.PORT || 3001;
 
 app.use(morgan('dev'))
 app.use(bodyParser.text())
+// Define middleware here
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Define middleware here

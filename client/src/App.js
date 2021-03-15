@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 // import { Auth0Provider } from "@auth0/auth0-react";
 import LoginButton from './components/Footer';
