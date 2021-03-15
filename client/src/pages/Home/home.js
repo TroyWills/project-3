@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Item from "../../components/Items/ItemCard"
+import ItemCard from "../../components/Items/ItemCard"
 import "./style.css"
 
 const Home = () => {
@@ -7,7 +7,10 @@ const Home = () => {
 
   useEffect(() => {
     getProducts();
+<<<<<<< HEAD
     console.log(products)
+=======
+>>>>>>> main
   }, []);
 
   const getProducts = async () => {
@@ -16,7 +19,9 @@ const Home = () => {
       .then((data) => setProducts(data))
       .catch((err) => err.message);
   };
+
   return (
+<<<<<<< HEAD
     <>
       <div className="body">
         <div className="heading">The Mini Mart</div>
@@ -40,8 +45,27 @@ const Home = () => {
 
           );
         })}
+=======
+    <div className="body">
+      <div className="heading">The Mini Mart</div>
+      <div className="items">
+        {products &&
+          products.map((product) => {
+            return (
+              <ItemCard
+                key={product.name}
+                img={product.img}
+                name={product.name}
+                description={product.description}
+                price={product.price}
+                width={product.width}
+                // height={product.height}
+              />
+            );
+          })}
+>>>>>>> main
       </div>
-    </>
+    </div>
   );
 };
 
