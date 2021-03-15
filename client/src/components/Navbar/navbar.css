@@ -1,14 +1,29 @@
-#name{
-    font-size: 30px;
+#name {
+  font-size: 30px;
 }
 /* #name{
     font-size: 30px;
     background-color: aqua;
 } */
 
-#shopCart{
-    width: 60px;
-    /* height: 50px; */
-    float: right;
-    margin-right: -px;
+#shopCart {
+  width: 60px;
+  /* height: 50px; */
+  float: right;
+  margin-right: -150px;
+}
+.cart {
+  padding: 0px 20px;
+  margin-right: 6px;
+}
+
+.cart_icon {
+  position: absolute;
+  right: 1353px;
+  top: 5px;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 0.125rem;
 }

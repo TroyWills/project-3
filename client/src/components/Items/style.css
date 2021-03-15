@@ -1,0 +1,15 @@
+.item {
+  margin: 20px;
+  width: 150px;
+}
+
+.addToCart {
+  background-color: #f3ebe7;
+  padding: 7px;
+}
+
+.quantity_updater {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
