@@ -20,6 +20,15 @@ module.exports = {
                 res.json(dbModel)
             })
             .catch(err => res.status(422).json(err));
-
+    },
+    deleteItem: function (req, res) {
+        db.Grocery
+        .deleteOne({ _id: req.params.id })
+        .then(function (err,data) {
+            if(err) throw err;
+            console.log("delete data",data);
+            res.json(data)
+        })
+        .catch(err => res.status(422).json(err));
     }
 }

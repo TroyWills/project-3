@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { CardNumberElement } from 'react-stripe-elements'
 
+
+
 // import './checkout-page.css';
 // import Footer from "../components/footer";
 class Cart extends Component {
