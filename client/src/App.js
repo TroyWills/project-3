@@ -20,9 +20,9 @@ function App() {
         <Provider store={store}>
           <Navbar />
           <Home />
-              <Cart/>
-          <footer>
-          <LoginButton/>
+          <Cart />
+          <footer />
+          <LoginButton />
         </Provider>
       </Auth0Provider>
     </div>
