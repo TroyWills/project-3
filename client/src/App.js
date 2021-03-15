@@ -22,13 +22,11 @@ function App() {
       >
         <Provider store={store}>
           <Navbar />
-          <Home />
-
-
-        </Provider>
-        <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home} />
           <Route exact path= "/cart" component={Cart} />
           <Route exact path= "/admin" component={Admin} />
+
+        </Provider>
       </Auth0Provider>
     </div>
     </Router>
