@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { CardNumberElement } from 'react-stripe-elements'
+// import { CardNumberElement, CardExpiryElement, CardCvcElement } from 'react-stripe-elements'
 
 
 
@@ -13,7 +13,7 @@ class Cart extends Component {
           <div className="title">
             Shopping Bag
       </div>
-          <CardNumberElement />
+          {/* <CardNumberElement /> */}
         </div>
 
         <div className="item">
@@ -103,32 +103,28 @@ class Cart extends Component {
 
           <div className="total-price">PRICE</div>
         </div>
-
-        {/* </div> */}
         <div className="Card-Details">
 
-          <div className="Card-Details">
+        </div>
 
-          </div>
-
-          <form action="/action_page.php" method="get">
-            <label for="fname">Name on card</label>
-            <input type="text" id="fname" name="fname"><br><br></br>
-              <label for="lname">Card information</label>
-              <CardNumberElement />
-              <label for="fname">Expiration Date</label>
-              <CardExpiryElement />
-              <label for="fname">CVV</label>
-              <CardCvcElement />
-              <div className="checkout-button">
-                <button className="checkout" type="button" name="button" style="text-align: center">
-                  Checkout
+        <form action="/action_page.php" method="get">
+          <label for="fname">Name on card</label>
+          <input type="text" id="fname" name="fname" />
+          <label for="lname">Card information</label>
+          {/* <CardNumberElement /> */}
+          <label for="fname">Expiration Date</label>
+          {/* <CardExpiryElement /> */}
+          <label for="fname">CVV</label>
+          {/* <CardCvcElement /> */}
+          <div className="checkout-button">
+            <button className="checkout" type="button" name="button">
+              Checkout
               </button>
-                <div />
-          </form>
-    </div>
+          </div>
+        </form>
       </>
     )
   }
 }
+
 export default Cart

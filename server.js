@@ -23,12 +23,6 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-// stripe router
-// app.use('/charge', require('./routes/paymentRouter'))
-
-//test code
-
-
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/grocerylist", {
   useNewUrlParser: true,

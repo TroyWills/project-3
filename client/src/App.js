@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import { Elements } from 'react-stripe-elements'
+// import { Elements } from 'react-stripe-elements'
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
@@ -21,15 +21,12 @@ function App() {
           clientId={process.env.REACT_APP_CLIENT_ID}
           redirectUri={window.location.origin}
         >
-          <Elements>
-            <Provider store={store}>
-              <Navbar />
-              <Route exact path="/" component={Home} />
-              <Route exact path="/cart" component={Cart} />
-              <Route exact path="/admin" component={Admin} />
-
-            </Provider>
-          </Elements>
+          <Provider store={store}>
+            <Navbar />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/admin" component={Admin} />
+          </Provider>
         </Auth0Provider>
       </div>
     </Router>
