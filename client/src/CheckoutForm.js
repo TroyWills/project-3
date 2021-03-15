@@ -8,8 +8,8 @@ const CheckoutForm = (props) => {
     const [complete, setComplete] = useState(false)
 
     const submit = async (ev) => {
+
         let { token } = await props.stripe.createToken({ name: "Name" });
-        console.log(token)
 
         await axios.post('/charge', {
             headers: { "Content-Type": "text/plain" },
