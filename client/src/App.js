@@ -30,6 +30,8 @@ function App() {
 
   return (
     <div>
+      <Navbar/>
+      <Home />
       {/* insert wrappers inside of Auth0Provider */}
       <Auth0Provider
         domain={process.env.REACT_APP_DOMAIN}
