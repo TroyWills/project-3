@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
 import Cart from "./pages/shopping-cart/cart"
 import Home from "./pages/Home/home";
-import Admin from "./pages/admin"
+import Admin from "./pages/Admin/admin"
 import { Provider } from "react-redux";
 import { store } from "./utils/redux/store";
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -41,8 +41,7 @@ function App() {
             {/* <Route exact path="/" component={Home} /> */}
             <Route exact path="/" render={() => <Home filteredProducts={filteredProducts} />} />
             <Route exact path="/cart" component={Cart} />
-            <Route exact path="/admin" component={Admin} />
-
+            <Route exact path="/admin" render={() => <Admin filteredProducts={filteredProducts} />} />
           </Provider>
         </Auth0Provider>
       </div>
