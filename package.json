@@ -27,6 +27,7 @@
         "express-openid-connect": "^2.3.0",
         "if-env": "^1.0.4",
         "mongoose": "^5.3.16",
-        "react-feather": "^2.0.9"
+        "react-feather": "^2.0.9",
+        "react-router-dom": "^5.2.0"
     }
 }
