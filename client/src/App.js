@@ -1,6 +1,5 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import Home from './pages/Home/home';
 import { Auth0Provider } from "@auth0/auth0-react";
 import Cart from "./pages/shopping-cart/cart"
 import Home from "./pages/Home/home";
