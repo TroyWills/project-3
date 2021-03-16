@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemCard from "../../components/Items/ItemCard"
 import "./style.css";
-import CheckoutForm from "../../CheckoutForm"
 
 const Home = (props) => {
   // const [products, setProducts] = useState();
@@ -23,7 +22,6 @@ const Home = (props) => {
 
   return (
     <div className="body">
-      <CheckoutForm />
       <div className="heading">The Mini Mart</div>
       <div className="items">
         {props.filteredProducts &&
