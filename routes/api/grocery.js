@@ -12,4 +12,9 @@ router.route("/:category")
 // .put(groceryController.update)
 // .delete(groceryController.remove);
 
+router.route("/:id")
+    .delete(groceryController.deleteItem)
+
+
+
 module.exports = router;
