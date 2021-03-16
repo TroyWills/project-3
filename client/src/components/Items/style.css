@@ -1,15 +1,44 @@
 .item {
-  margin: 20px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 150px;
+  height: 250px;
+}
+
+@media (max-width: 768px) {
+  .item {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.imgContainer {
+  height: 40%;
+}
+
+.detailsContainer {
+  height: 25%;
 }
 
 .addToCart {
   background-color: #f3ebe7;
-  padding: 7px;
+  /* padding: 7px; */
 }
 
 .quantity_updater {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+img {
+  width:100%;
+  height:100%;
+}
+
+h3 {
+  /* font-size: 25px; */
+  font-size: 1.9vw;
 }

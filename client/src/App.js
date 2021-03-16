@@ -8,9 +8,26 @@ import Admin from "./pages/admin"
 import { Provider } from "react-redux";
 import { store } from "./utils/redux/store";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-
+import { useEffect, useState } from "react";
 
 function App() {
+  const [products, setProducts] = useState();
+  const [filteredProducts, setFilteredProducts] = useState();
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  const getProducts = async () => {
+    await fetch("/api/grocery")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+        setFilteredProducts(data);
+      })
+      .catch((err) => err.message);
+  };
+
   return (
     <Router>
     <div>
@@ -21,8 +38,9 @@ function App() {
         redirectUri={window.location.origin}
       >
         <Provider store={store}>
-          <Navbar />
-          <Route exact path="/" component={Home} />
+          <Navbar products={products} setFilteredProducts={setFilteredProducts}/>
+          {/* <Route exact path="/" component={Home} /> */}
+          <Route exact path="/" render={() => <Home filteredProducts={filteredProducts}/>} />
           <Route exact path= "/cart" component={Cart} />
           <Route exact path= "/admin" component={Admin} />
 

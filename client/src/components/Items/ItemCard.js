@@ -18,44 +18,48 @@ const ItemCard = ({ name, img, width, price }) => {
 
   return (
     <div className="item">
-      <img src={img} width={width} />
-      <h3>{name}</h3>
-      {/* <h3>{description}</h3> */}
-      <h3>{price}</h3>
-      {!showQuantityUpdater && (
-        <button
-          className="addToCart"
-          onClick={() =>
-            dispatch(
-              AddToCart({
-                name,
-                // description,
-                price,
-                img,
-                width,
-                quantity: 1,
-              })
-            )
-          }
-        >
-          Add to cart
-        </button>
-      )}
-      {showQuantityUpdater && (
-        <div className="quantity_updater">
-          <MinusCircle
+      <div className="imgContainer">
+        <img src={img} width={width} />
+      </div>
+      <div className="detailsContainer">
+        <h3>{name}</h3>
+        {/* <h3>{description}</h3> */}
+        <h3>{price}</h3>
+        {!showQuantityUpdater && (
+          <button
+            className="addToCart"
             onClick={() =>
-              dispatch(UpdateQuantity({ name, increment: false }))
+              dispatch(
+                AddToCart({
+                  name,
+                  // description,
+                  price,
+                  img,
+                  width,
+                  quantity: 1,
+                })
+              )
             }
-          />
-          <div>
-            <span>{itemQuantity}</span>
+          >
+            Add to cart
+          </button>
+        )}
+        {showQuantityUpdater && (
+          <div className="quantity_updater">
+            <MinusCircle
+              onClick={() =>
+                dispatch(UpdateQuantity({ name, increment: false }))
+              }
+            />
+            <div>
+              <span>{itemQuantity}</span>
+            </div>
+            <PlusCircle
+              onClick={() => dispatch(UpdateQuantity({ name, increment: true }))}
+            />
           </div>
-          <PlusCircle
-            onClick={() => dispatch(UpdateQuantity({ name, increment: true }))}
-          />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
