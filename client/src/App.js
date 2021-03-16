@@ -1,5 +1,3 @@
-// import logo from './logo.svg';
-// import { Elements } from 'react-stripe-elements'
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
