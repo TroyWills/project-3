@@ -2,17 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { StripeProvider, Elements } from 'react-stripe-elements'
+// import { StripeProvider, Elements } from 'react-stripe-elements'
 import reportWebVitals from './reportWebVitals';
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js'
 
+const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_TEST_APIKEY)
 ReactDOM.render(
-  <StripeProvider apiKey={
-    process.env.REACT_APP_PUBLISHABLE_TEST_APIKEY
-  }>
-    <Elements>
-      <App />
-    </Elements>
-  </StripeProvider>
+
+  <Elements stripe={stripePromise}>
+    <App />
+  </Elements>
   ,
   document.getElementById('root')
 );
