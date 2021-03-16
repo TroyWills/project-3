@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 import ItemCard from "../../components/Items/ItemCard"
-import "./style.css"
+import "./style.css";
 
 const Home = (props) => {
   // const [products, setProducts] = useState();
@@ -34,7 +34,7 @@ const Home = (props) => {
                 description={product.description}
                 price={product.price}
                 width={product.width}
-                // height={product.height}
+              // height={product.height}
               />
             );
           })}

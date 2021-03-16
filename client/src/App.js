@@ -1,5 +1,4 @@
-// import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
 import Cart from "./pages/shopping-cart/cart"
@@ -30,23 +29,23 @@ function App() {
 
   return (
     <Router>
-    <div>
-      {/* insert wrappers inside of Auth0Provider */}
-      <Auth0Provider
-        domain={process.env.REACT_APP_DOMAIN}
-        clientId={process.env.REACT_APP_CLIENT_ID}
-        redirectUri={window.location.origin}
-      >
-        <Provider store={store}>
-          <Navbar products={products} setFilteredProducts={setFilteredProducts}/>
-          {/* <Route exact path="/" component={Home} /> */}
-          <Route exact path="/" render={() => <Home filteredProducts={filteredProducts}/>} />
-          <Route exact path= "/cart" component={Cart} />
-          <Route exact path= "/admin" component={Admin} />
+      <div>
+        {/* insert wrappers inside of Auth0Provider */}
+        <Auth0Provider
+          domain={process.env.REACT_APP_DOMAIN}
+          clientId={process.env.REACT_APP_CLIENT_ID}
+          redirectUri={window.location.origin}
+        >
+          <Provider store={store}>
+            <Navbar products={products} setFilteredProducts={setFilteredProducts} />
+            {/* <Route exact path="/" component={Home} /> */}
+            <Route exact path="/" render={() => <Home filteredProducts={filteredProducts} />} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/admin" component={Admin} />
 
-        </Provider>
-      </Auth0Provider>
-    </div>
+          </Provider>
+        </Auth0Provider>
+      </div>
     </Router>
   );
 }
