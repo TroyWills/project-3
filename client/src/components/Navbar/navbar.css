@@ -13,17 +13,41 @@
   margin-right: -150px;
 }
 .cart {
-  padding: 0px 20px;
+  /* float: right; */
+  position: static;
+  
+  /* padding: 0px 20px; */
   margin-right: 6px;
 }
 
 .cart_icon {
-  position: absolute;
+  /* position: absolute;
   right: 1353px;
-  top: 5px;
-  padding-left: 0.25rem;
+  top: 5px; */
+  /* padding-top: 1.00rem; */
+  padding-left: 1.50rem;
   padding-right: 0.25rem;
   font-size: 0.75rem;
   font-weight: 700;
   border-radius: 0.125rem;
 }
+
+.cart_icon2 {
+  margin-top: -0.5rem;
+}
+
+ .navbar-brand {
+   position: static;
+   margin: auto;
+ }
+
+ @media (min-width: 990px) {
+   .collapse {
+     padding-left: 50px;
+   }
+
+   .navbar-brand {
+    position: relative;
+    padding-left: 20px;
+  }
+ }
