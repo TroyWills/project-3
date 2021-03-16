@@ -19,7 +19,7 @@ const grocerySeed = [
     price: 0.99,
     category: "produce",
     quantity: 10,
-    img: "http://clipart-library.com/image_gallery2/Banana.png",
+    img: "http://clipart-library.com/image_gallery2/Banana-Free-PNG-Image.png",
     width: "100px",
   },
   {
@@ -27,8 +27,7 @@ const grocerySeed = [
     price: 2.99,
     category: "produce",
     quantity: 10,
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6o2M70XpeggT0lpDA-ZVFCdFL9RZeU2TbSUfiSSCCtRzJAgk&s",
+    img: "http://clipart-library.com/newhp/Asparagus-PNG-Clipart.png",
     width: "110px",
   },
   {
@@ -36,8 +35,7 @@ const grocerySeed = [
     price: 3.99,
     category: "produce",
     quantity: 10,
-    img:
-      "http://clipart-library.com/image_gallery2/Strawberry-Download-PNG.png",
+    img: "http://clipart-library.com/images_k/strawberries-transparent/strawberries-transparent-5.png",
     width: "90px",
   },
   {
@@ -45,8 +43,7 @@ const grocerySeed = [
     price: 1.5,
     category: "produce",
     quantity: 10,
-    img:
-      "http://clipart-library.com/images_k/tomato-transparent/tomato-transparent-3.jpg",
+    img: "http://clipart-library.com/image_gallery/n823677.png",
     width: "100px",
   },
   {
@@ -54,9 +51,8 @@ const grocerySeed = [
     price: 2.99,
     category: "dairy",
     quantity: 10,
-    img:
-      "http://clipart-library.com/images_k/milk-clipart-transparent/milk-clipart-transparent-17.jpg",
-    width: "70px",
+    img: "http://clipart-library.com/images/BpT5kM7i9.png",
+  
   },
   {
     name: "Yogurt",
@@ -71,8 +67,7 @@ const grocerySeed = [
     price: 2.99,
     category: "dairy",
     quantity: 10,
-    img:
-      "http://clipart-library.com/new_gallery/124-1240630_block-of-butter-png-cheddar-cheese-block-png.png",
+    img: "http://clipart-library.com/images_k/cheese-transparent/cheese-transparent-4.png",
     width: "80px",
   },
   {
@@ -80,8 +75,7 @@ const grocerySeed = [
     price: 2.99,
     category: "dairy",
     quantity: 10,
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4AxQnXMDg9na5lu8l6jUHWCV-4cp07N7uTvKceLnw5fhTNzY&s",
+    img: "http://clipart-library.com/image_gallery2/Butter-PNG-Clipart.png",
     width: "100px",
   },
   {
@@ -89,8 +83,7 @@ const grocerySeed = [
     price: 2.99,
     category: "dairy",
     quantity: 10,
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-17hIlqRR8Dda-lSGaV4rWQxZdXu0Vr2n3wJzr4KP5Ghk_nS7&s",
+    img: "http://clipart-library.com/img/865592.jpg",
     width: "60px",
   },
   {
