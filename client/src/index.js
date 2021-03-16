@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { StripeProvider, Elements } from 'react-stripe-elements'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <StripeProvider apiKey={
+    process.env.REACT_APP_PUBLISHABLE_TEST_APIKEY
+  }>
+    <Elements>
+      <App />
+    </Elements>
+  </StripeProvider>
+  ,
   document.getElementById('root')
 );
 

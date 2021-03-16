@@ -1,35 +1,34 @@
 {
-    "name": "mern",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
-        "start:prod": "node server.js",
-        "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
-        "client": "cd client && npm run start",
-        "seed": "node scripts/seedDB.js",
-        "install": "cd client && npm install",
-        "build": "cd client && npm run build",
-        "heroku-postbuild": "npm run build"
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "concurrently": "^6.0.0",
-        "nodemon": "^1.18.7"
-    },
-    "dependencies": {
-        "@stripe/stripe-js": "^1.13.1",
-        "axios": "^0.18.0",
-        "bootstrap": "^4.6.0",
-        "express": "^4.16.3",
-        "if-env": "^1.0.4",
-        "mongoose": "^5.3.16",
-        "react-bootstrap": "^1.5.2",
-        "dotenv": "^8.2.0",
-        "express-openid-connect": "^2.3.0",
-        "react-feather": "^2.0.9",
-        "react-router-dom": "^5.2.0"
-    }
+        "name": "mern",
+        "version": "1.0.0",
+        "description": "",
+        "main": "server.js",
+        "scripts": {
+                "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+                "start:prod": "node server.js",
+                "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+                "client": "cd client && npm run start",
+                "seed": "node scripts/seedDB.js",
+                "install": "cd client && npm install",
+                "build": "cd client && npm run build",
+                "heroku-postbuild": "npm run build"
+        },
+        "author": "",
+        "license": "ISC",
+        "devDependencies": {
+                "concurrently": "^6.0.0",
+                "nodemon": "^1.18.7"
+        },
+        "dependencies": {
+                "axios": "^0.18.0",
+                "dotenv": "^8.2.0",
+                "express": "^4.17.1",
+                "express-openid-connect": "^2.3.0",
+                "if-env": "^1.0.4",
+                "mongoose": "^5.12.0",
+                "morgan": "^1.10.0",
+                "react-feather": "^2.0.9",
+                "stripe": "^8.138.0"
+      
+          }
 }
