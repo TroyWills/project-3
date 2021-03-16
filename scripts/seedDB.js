@@ -121,7 +121,7 @@ const grocerySeed = [
     width: "100px",
   },
   {
-    name: "Chexmix",
+    name: "Chex Mix",
     price: 2.99,
     category: "snacks",
     quantity: 10,
@@ -184,7 +184,7 @@ const grocerySeed = [
     width: "100px",
   },
   {
-    name: "Toliet Paper",
+    name: "Toilet Paper",
     price: 2.99,
     category: "personal",
     quantity: 10,
@@ -193,7 +193,7 @@ const grocerySeed = [
     width: "100px",
   },
   {
-    name: "Deodrant",
+    name: "Deodorant",
     price: 2.99,
     category: "personal",
     quantity: 10,
