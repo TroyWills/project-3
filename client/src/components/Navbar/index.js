@@ -5,21 +5,30 @@ import { ShoppingCart } from "react-feather";
 import { useSelector } from "react-redux";
 import { getNumOfItemsInCart } from "../../utils/redux/cartSlice";
 
-function Navbar() {
+function Navbar(props) {
   const { isAuthenticated, loginWithPopup } = useAuth0();
 
   const numOfItemsInCart = useSelector(getNumOfItemsInCart);
 
-  console.log(numOfItemsInCart);
+  console.log("Number: " + numOfItemsInCart);
+
+  function filter(category) {
+    if (category === "all") {
+      props.setFilteredProducts(props.products);
+    } else {
+      let newList = props.products.filter((product) => product.category === category)
+  
+      console.log(newList);
+  
+      props.setFilteredProducts(newList);
+    }
+  }
 
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          The Mini Mart
-        </a>
         <button
-          class="navbar-toggler"
+          class="pull-left navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown"
@@ -29,6 +38,9 @@ function Navbar() {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+        <a class="navbar-brand" href="/">
+          The Mini Mart
+        </a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
@@ -47,27 +59,32 @@ function Navbar() {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a onClick={() => filter("all")}class="dropdown-item" href="#">
+                    All
+                  </a>
+                </li>
+                <li>
+                  <a onClick={() => filter("produce")}class="dropdown-item" href="#">
                     Produce
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a  onClick={() => filter("dairy")}class="dropdown-item" href="#">
                     Dairy
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a onClick={() => filter("snacks")}class="dropdown-item" href="#">
                     Snacks
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a onClick={() => filter("drinks")}class="dropdown-item" href="#">
                     Drink
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
+                  <a onClick={() => filter("personal")}class="dropdown-item" href="#">
                     Personal Care
                   </a>
                 </li>
@@ -80,14 +97,19 @@ function Navbar() {
                 </a>
               </li>
             )}
-            <div className="cart">
-              <ShoppingCart />
-              {numOfItemsInCart > 0 && (
-                <div className="cart_icon">{numOfItemsInCart}</div>
-              )}
-            </div>
           </ul>
         </div>
+            <div className="cart">
+              {numOfItemsInCart > 0 ? (
+                <>
+                  <div className="cart_icon">{numOfItemsInCart}
+                  </div>
+                  <div className="cart_icon2">
+                    <a href="/cart"><ShoppingCart /></a>
+                  </div>
+                </>
+              ): null}
+            </div>
       </div>
     </nav>
   );
