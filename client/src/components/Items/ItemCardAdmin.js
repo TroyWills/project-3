@@ -3,18 +3,21 @@ import "./style.css";
 import { useDispatch, useSelector } from "react-redux";
 import { AddToCart, UpdateQuantity, getItemQuantity } from "../../utils/redux/cartSlice";
 import { MinusCircle, PlusCircle } from "react-feather";
+import axios from "axios";
 
-const ItemCard = ({ name, img, width, price }) => {
+
+const ItemCard = ({ name, img, width, price, _id }) => {
   
-  const [showQuantityUpdater, setShowQuantityUpdater] = useState(false);
-  const dispatch = useDispatch();
-  const itemQuantity = useSelector((state) => getItemQuantity(state, name));
+  function deleteItem(id) {
+    console.log(id);
+    axios.delete('/api/grocery/' + id)
+      .then(() => {
+        console.log("works!")
+      }
+      )
+      .catch(err => console.log(err));
+  }
 
-  useEffect(() => {
-    itemQuantity === 0
-      ? setShowQuantityUpdater(false)
-      : setShowQuantityUpdater(true);
-  }, [itemQuantity]);
 
   return (
     <div className="item">
@@ -26,23 +29,16 @@ const ItemCard = ({ name, img, width, price }) => {
         {/* <h3>{description}</h3> */}
         <h3>{price}</h3>
         {/* Add Button to delete item from page here */}
+          <button type="button" className="btn btn-danger"
+            onClick={(_id) => 
+              deleteItem
+            }>
+            Remove Item
 
+              
+          </button>
+            
 
-        {showQuantityUpdater && (
-          <div className="quantity_updater">
-            <MinusCircle
-              onClick={() =>
-                dispatch(UpdateQuantity({ name, increment: false }))
-              }
-            />
-            <div>
-              <span>{itemQuantity}</span>
-            </div>
-            <PlusCircle
-              onClick={() => dispatch(UpdateQuantity({ name, increment: true }))}
-            />
-          </div>
-        )}
       </div>
     </div>
   );

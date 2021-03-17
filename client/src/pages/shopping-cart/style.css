@@ -12,6 +12,7 @@
 .continue_shopping {
   padding-bottom: 16px;
   border-bottom: 1px solid lightgray;
+  padding-top: 18px;
 }
 
 .continue_shopping a {

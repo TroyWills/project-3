@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import CartPage from "./pages/shopping-cart/cart";
 import { StripeProvider } from "react-stripe-elements";
 
+
 function App() {
   const [products, setProducts] = useState();
   const [filteredProducts, setFilteredProducts] = useState();
