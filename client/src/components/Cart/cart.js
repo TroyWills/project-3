@@ -5,7 +5,7 @@ import "./style.css";
  
 const Cart = ({
     name,
-    // description,
+    description,
     price,
     img,
     width,
@@ -21,7 +21,7 @@ const Cart = ({
           </div>
           <div className="description">
             <div className="item_name"> {name} </div>
-            {/* <div>{description}</div> */}
+            <div>{description}</div>
           </div>
         </div>
         <div className="quantity_updater">

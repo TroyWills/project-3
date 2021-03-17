@@ -24,7 +24,7 @@
 
 .addToCart {
   background-color: #f3ebe7;
-  /* padding: 7px; */
+ 
 }
 
 .quantity_updater {
@@ -36,9 +36,15 @@
 img {
   width:100%;
   height:100%;
+  
 }
 
 h3 {
-  /* font-size: 25px; */
-  font-size: 1.9vw;
+  display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }

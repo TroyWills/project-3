@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AddToCart, UpdateQuantity, getItemQuantity } from "../../utils/redux/cartSlice";
 import { MinusCircle, PlusCircle } from "react-feather";
 
-const ItemCard = ({ name, img, width, price }) => {
+const ItemCard = ({ name, img, description, width, price }) => {
   
   const [showQuantityUpdater, setShowQuantityUpdater] = useState(false);
   const dispatch = useDispatch();
@@ -23,8 +23,8 @@ const ItemCard = ({ name, img, width, price }) => {
       </div>
       <div className="detailsContainer">
         <h3>{name}</h3>
-        {/* <h3>{description}</h3> */}
-        <h3>{price}</h3>
+        <h6>{description}</h6>
+        <h3>${price}</h3>
         {!showQuantityUpdater && (
           <button
             className="addToCart"
@@ -32,7 +32,7 @@ const ItemCard = ({ name, img, width, price }) => {
               dispatch(
                 AddToCart({
                   name,
-                  // description,
+                  description,
                   price,
                   img,
                   width,

@@ -45,7 +45,7 @@ const CartPage = (props) => {
               <Cart
                 key={item.name}
                 name={item.name}
-                // description={item.description}
+                description={item.description}
                 price={item.price}
                 img={item.img}
                 width={item.width}
