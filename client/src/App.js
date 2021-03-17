@@ -29,6 +29,9 @@ function App() {
       .catch((err) => err.message);
   };
 
+  var result = window.location.origin + "/admin"
+  console.log(result);
+
   return (
     <Router>
       <div>
@@ -36,8 +39,8 @@ function App() {
         <Auth0Provider
           domain={process.env.REACT_APP_DOMAIN}
           clientId={process.env.REACT_APP_CLIENT_ID}
-          redirectUri={window.location.origin}
-        >
+          redirectUri={window.location.origin + "/admin"}>
+          
           <StripeProvider apiKey={process.env.REACT_APP_PUBLISHABLE_TEST_APIKEY}>
             <Provider store={store}>
               <Navbar products={products} setFilteredProducts={setFilteredProducts} />

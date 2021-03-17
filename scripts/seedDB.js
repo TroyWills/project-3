@@ -63,7 +63,7 @@ const grocerySeed = [
   {
     name: "Yogurt",
     price: 1.50,
-    description:"",
+    description:"6oz of yogurt",
     category: "dairy",
     quantity: 10,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ03skB9xzedXVGjh-EkM8KOnsRKwGx3TVPiynNkbIdqJzRnQ8&s",
@@ -109,7 +109,7 @@ const grocerySeed = [
   {
     name: "Chocolate Chip Cookies",
     price: 1.99,
-    description:"a 3 pack bag",
+    description:"a 3 pack cookies",
     category: "snacks",
     quantity: 10,
     img:
@@ -153,8 +153,8 @@ const grocerySeed = [
     category: "drinks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ-aSJfC7v9OiP8jSeYgb4ymND9GwPuLvbg9OHAPmQTBeBhcRK&s",
-    width: "100px",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC3vH1FF8bNwMa2ani45H7wDAkLh929EFc8-Ed_3jbv5n9x5I&s",
+    width: "",
   },
   {
     name: "Pepsi",
@@ -213,7 +213,7 @@ const grocerySeed = [
     category: "personal",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ_CS5tAe-FvuI77NEv0mImbtXUD68jd14SgO3g27WcifTi44&s",
+      "https://www.pinclipart.com/picdir/big/222-2221147_original-solid-deodorant-secret-png-secret-deodorant-clipart.png",
     width: "100px",
   },
   {
@@ -229,7 +229,7 @@ const grocerySeed = [
   {
     name: "Shampoo",
     price: 2.99,
-    description:"",
+    description:"24oz bottle of shampoo",
     category: "personal",
     quantity: 10,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKUBNco8zn2ntWuZ6c4ezc8UetNjpIpbIL3A&usqp=CAU",
@@ -238,12 +238,12 @@ const grocerySeed = [
   {
     name: "Tooth Brush",
     price: 2.99,
-    description:"",
+    description:"3 pack toothbrush",
     category: "personal",
     quantity: 10,
     img:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjhxPUBuQV25U6ezDYhkmtdHx0FUCNU2W-lvkz0_dlpbEwvCc&s",
-    width: "100px",
+    width: "",
   },
 ];
 
