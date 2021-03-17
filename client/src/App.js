@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import CartPage from "./pages/shopping-cart/cart";
 
+
 function App() {
   const [products, setProducts] = useState();
   const [filteredProducts, setFilteredProducts] = useState();

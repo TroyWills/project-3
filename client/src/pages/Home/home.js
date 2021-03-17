@@ -3,26 +3,10 @@ import ItemCard from "../../components/Items/ItemCard"
 import "./style.css";
 
 const Home = (props) => {
-  // const [products, setProducts] = useState();
-  // const [filteredProducts, setFilteredProducts] = useState();
-
-  // useEffect(() => {
-  //   getProducts();
-  // }, []);
-
-  // const getProducts = async () => {
-  //   await fetch("/api/grocery")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setProducts(data);
-  //       setFilteredProducts(data);
-  //     })
-  //     .catch((err) => err.message);
-  // };
 
   return (
     <div className="body">
-      <div className="heading">The Mini Mart</div>
+      <div className="heading1">The Mini Mart</div>
       <div className="items">
         {props.filteredProducts &&
           props.filteredProducts.map((product) => {
