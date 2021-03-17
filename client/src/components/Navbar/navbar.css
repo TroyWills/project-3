@@ -1,32 +1,21 @@
 #name {
   font-size: 30px;
 }
-/* #name{
-    font-size: 30px;
-    background-color: aqua;
-} */
+
 
 #shopCart {
   width: 60px;
-  /* height: 50px; */
   float: right;
   margin-right: -150px;
 }
 .cart {
-  /* float: right; */
   position: static;
-  
-  /* padding: 0px 20px; */
   margin-right: 6px;
 }
 
 .cart_icon {
-  /* position: absolute;
-  right: 1353px;
-  top: 5px; */
-  /* padding-top: 1.00rem; */
   padding-left: 1.50rem;
-  padding-right: 0.25rem;
+  padding-right: 0.20rem;
   font-size: 0.75rem;
   font-weight: 700;
   border-radius: 0.125rem;
@@ -40,6 +29,9 @@
    position: static;
    margin: auto;
  }
+ .navbar-brand a:hover {
+  color: #998100;
+}
 
  @media (min-width: 990px) {
    .collapse {
