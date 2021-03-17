@@ -3,7 +3,7 @@ import {getNumOfItemsInCart} from '../../utils/redux/cartSlice'
 import {useSelector} from 'react-redux'
 import Cart from '../../components/Cart/cart'
 import "./style.css";
-
+import {Link} from "react-router-dom"
 const CartPage = () => {
 
   const numOfItemsInCart = useSelector(getNumOfItemsInCart);
@@ -15,10 +15,10 @@ const CartPage = () => {
     <div className="cart">
       <div className="cart_details">
         <div className="continue_shopping">
-          <a href="/">
+          <Link to="/">
             <ArrowLeft />
               Continue Shopping
-            </a>
+              </Link>
         </div>
         <div className="checkout_heading">
           <div className="heading">Cart</div>

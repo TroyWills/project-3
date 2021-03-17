@@ -4,6 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { ShoppingCart } from "react-feather";
 import { useSelector } from "react-redux";
 import { getNumOfItemsInCart } from "../../utils/redux/cartSlice";
+import {Link} from "react-router-dom"
 
 function Navbar(props) {
   const { isAuthenticated, loginWithPopup } = useAuth0();
@@ -103,7 +104,9 @@ function Navbar(props) {
                   <div className="cart_icon">{numOfItemsInCart}
                   </div>
                   <div className="cart_icon2">
-                    <a href="/cart"><ShoppingCart /></a>
+                    <Link to="/cart">
+                      <ShoppingCart />
+                      </Link>
                   </div>
                 </>
               ): null}
