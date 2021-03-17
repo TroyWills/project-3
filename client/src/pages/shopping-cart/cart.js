@@ -1,10 +1,13 @@
 import { ArrowLeft } from 'react-feather'
-import {getNumOfItemsInCart} from '../../utils/redux/cartSlice'
-import {useSelector} from 'react-redux'
+import { getNumOfItemsInCart, getCurrentItem } from '../../utils/redux/cartSlice'
+import { useSelector } from 'react-redux'
 import "./style.css";
+import { RootState } from '../../utils/redux/store';
 
 const Cart = () => {
   const numOfItemsInCart = useSelector(getNumOfItemsInCart);
+  const getCurrentIt = useSelector(getCurrentItem)
+  console.log(getCurrentIt)
   return (
     <div className="cart">
       <div className="cart_details">

@@ -3,7 +3,9 @@ import axios from 'axios';
 import { CardElement, injectStripe } from 'react-stripe-elements';
 
 
+
 const CheckoutForm = (props) => {
+    console.log(RootState)
 
     const [complete, setComplete] = useState(false)
 
