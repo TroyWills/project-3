@@ -18,12 +18,12 @@ const OrderSummary = (props) => {
   console.log(stripe)
   const submit = async (ev) => {
     console.log(stripe)
-    let { token } = await stripe.createToken(CardNumberElement);
+    let { token } = await stripe.createToken({ name: "Name" });
     console.log(token)
     await axios.post('/charge', {
       headers: { "Content-Type": "text/plain" },
       token: token.id,
-      amount: "2000",
+      amount: totalCharge,
     }
     ).then(res => {
       if (res.status === 200) {
@@ -34,48 +34,47 @@ const OrderSummary = (props) => {
   }
 
   const totalCostInCart = useSelector(getTotalCostInCart);
+  const totalCharge = ((totalCostInCart + DELIVERY_FEE) * 100).toFixed(0)
   const { addToast } = useToasts();
-  console.log(totalCostInCart);
+  console.log(totalCharge);
   return (
-    <Elements>
-      <div className="order_summary">
-        <div className="heading">Card details</div>
-        <div className="form">
-          <div className="input_title">Name on card</div>
-          <input className="input" />
-          <div className="input_title">Card information</div>
-          <CardNumberElement />
-          <div className="exp_cvv">
-            <div>
-              <div className="input_title">Expiration Date</div>
-              <CardExpiryElement />
-            </div>
-            <div>
-              <div className="input_title">CVV</div>
-              <CardCVCElement />
-            </div>
+    <div className="order_summary">
+      <div className="heading">Card details</div>
+      <div className="form">
+        <div className="input_title">Name on card</div>
+        <input className="input" />
+        <div className="input_title">Card information</div>
+        <CardNumberElement />
+        <div className="exp_cvv">
+          <div>
+            <div className="input_title">Expiration Date</div>
+            <CardExpiryElement />
+          </div>
+          <div>
+            <div className="input_title">CVV</div>
+            <CardCVCElement />
           </div>
         </div>
-        <div className="subtotal">
-          <div>Subtotal</div>
-          <div>${totalCostInCart.toFixed(2)}</div>
-        </div>
-        <div className="delivery_fee">
-          <div>Delivery fee </div>
-          <div>${DELIVERY_FEE}</div>
-        </div>
-        <div className="total_cost">
-          <div>Total</div>
-          <div>${`${(totalCostInCart + DELIVERY_FEE).toFixed(2)}`}</div>
-        </div>
-        <div
-          className="checkout"
-          onClick={submit}
-        >
-          <div>Checkout</div>
-        </div>
       </div>
-    </Elements>
+      <div className="subtotal">
+        <div>Subtotal</div>
+        <div>${totalCostInCart.toFixed(2)}</div>
+      </div>
+      <div className="delivery_fee">
+        <div>Delivery fee </div>
+        <div>${DELIVERY_FEE}</div>
+      </div>
+      <div className="total_cost">
+        <div>Total</div>
+        <div>${`${(totalCostInCart + DELIVERY_FEE).toFixed(2)}`}</div>
+      </div>
+      <div
+        className="checkout"
+        onClick={submit}
+      >
+        <div>Checkout</div>
+      </div>
+    </div>
   );
 };
 
