@@ -1,11 +1,11 @@
-// import { useEffect, useState } from "react";
+import AddForm from "../../components/Items/AddForm";
 import ItemCardAdmin from "../../components/Items/ItemCardAdmin";
-import ItemCard from "../../components/Items/ItemCardAdmin"
 import "./style.css";
 
 const Admin = (props) => {
 
   return (
+
     <div className="body">
       <div className="heading">The Mini Mart</div>
       <div className="items">
@@ -24,6 +24,7 @@ const Admin = (props) => {
               />
             );
           })}
+        <AddForm />
       </div>
     </div>
   );
