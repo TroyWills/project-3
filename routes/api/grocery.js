@@ -10,10 +10,8 @@ router.route("/")
 router.route("/:category")
     .get(groceryController.findByCategory)
 
-
+// Matches with "/api/grocery/:id"
 router.route("/:id")
     .delete(groceryController.deleteItem)
-
-
 
 module.exports = router;
