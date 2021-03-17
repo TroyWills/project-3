@@ -7,7 +7,7 @@ import { getNumOfItemsInCart } from "../../utils/redux/cartSlice";
 import {Link} from "react-router-dom";
 
 function Navbar(props) {
-  const { isAuthenticated, loginWithPopup } = useAuth0();
+  const { isAuthenticated, loginWithRedirect } = useAuth0();
 
   const numOfItemsInCart = useSelector(getNumOfItemsInCart);
 
@@ -117,7 +117,7 @@ function Navbar(props) {
             </li>
             {!isAuthenticated && (
               <li class="nav-item">
-                <a class="nav-link" href="#" onClick={loginWithPopup}>
+                <a class="nav-link" href="#" onClick={loginWithRedirect}>
                   Login
                 </a>
               </li>
