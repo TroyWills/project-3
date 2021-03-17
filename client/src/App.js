@@ -8,6 +8,7 @@ import { store } from "./utils/redux/store";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import CartPage from "./pages/shopping-cart/cart";
+import { StripeProvider } from "react-stripe-elements";
 
 function App() {
   const [products, setProducts] = useState();
@@ -36,13 +37,15 @@ function App() {
           clientId={process.env.REACT_APP_CLIENT_ID}
           redirectUri={window.location.origin}
         >
-          <Provider store={store}>
+          <StripeProvider apiKey={process.env.REACT_APP_PUBLISHABLE_TEST_APIKEY}>
+            <Provider store={store}>
               <Navbar products={products} setFilteredProducts={setFilteredProducts} />
               {/* <Route exact path="/" component={Home} /> */}
               <Route exact path="/" render={() => <Home filteredProducts={filteredProducts} />} />
               <Route exact path="/cart" component={CartPage} />
               <Route exact path="/admin" render={() => <Admin filteredProducts={filteredProducts} />} />
-          </Provider>
+            </Provider>
+          </StripeProvider>
         </Auth0Provider>
       </div>
     </Router>

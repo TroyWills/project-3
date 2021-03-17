@@ -7,8 +7,9 @@ import Cart from "../../components/Cart/cart";
 import "./style.css";
 import { Link } from "react-router-dom";
 import OrderSummary from '../../components/OrderSummary/orderSummary'
+import { Elements } from 'react-stripe-elements';
 
-const CartPage = () => {
+const CartPage = (props) => {
   const numOfItemsInCart = useSelector(getNumOfItemsInCart);
   const cartItems = useSelector((state) => state.cart);
   const totalCostInCart = useSelector(getTotalCostInCart);
@@ -23,43 +24,45 @@ const CartPage = () => {
 
   console.log(numOfItemsInCart);
   return (
-    <div className="cart">
-      <div className="cart_details">
-        <div className="continue_shopping">
-          <Link to="/">
-            <ArrowLeft />
+    <Elements>
+      <div className="cart">
+        <div className="cart_details">
+          <div className="continue_shopping">
+            <Link to="/">
+              <ArrowLeft />
             Continue Shopping
           </Link>
-        </div>
-        <div className="checkout_heading">
-          <div className="heading">Cart</div>
-          <div>
-            You have {numOfItemsInCart} item{numOfItemsInCart === 1 ? "" : "s"}{" "}
+          </div>
+          <div className="checkout_heading">
+            <div className="heading">Cart</div>
+            <div>
+              You have {numOfItemsInCart} item{numOfItemsInCart === 1 ? "" : "s"}{" "}
             in your cart
           </div>
+          </div>
+          <div className="cart_list">
+            {cartItems.map((item) => (
+              <Cart
+                key={item.name}
+                name={item.name}
+                // description={item.description}
+                price={item.price}
+                img={item.img}
+                width={item.width}
+                quantity={item.quantity}
+              />
+            ))}
+          </div>
         </div>
-        <div className="cart_list">
-          {cartItems.map((item) => (
-            <Cart
-              key={item.name}
-              name={item.name}
-              // description={item.description}
-              price={item.price}
-              img={item.img}
-              width={item.width}
-              quantity={item.quantity}
-            />
-          ))}
-        </div>
+        {showOrderSummary && (
+          <div className="order_summary">
+            <ToastProvider placement="top-center">
+              <OrderSummary />
+            </ToastProvider>
+          </div>
+        )}
       </div>
-      {showOrderSummary && (
-        <div className="order_summary">
-          <ToastProvider placement="top-center">
-            <OrderSummary />
-          </ToastProvider>
-        </div>
-      )}
-    </div>
+    </Elements>
   );
 };
 
