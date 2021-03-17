@@ -1,13 +1,14 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import { Auth0Provider } from "@auth0/auth0-react";
-import Cart from "./pages/shopping-cart/cart"
 import Home from "./pages/Home/home";
 import Admin from "./pages/Admin/admin"
 import { Provider } from "react-redux";
 import { store } from "./utils/redux/store";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
+import CartPage from "./pages/shopping-cart/cart";
+
 
 function App() {
   const [products, setProducts] = useState();
@@ -37,11 +38,11 @@ function App() {
           redirectUri={window.location.origin}
         >
           <Provider store={store}>
-            <Navbar products={products} setFilteredProducts={setFilteredProducts} />
-            {/* <Route exact path="/" component={Home} /> */}
-            <Route exact path="/" render={() => <Home filteredProducts={filteredProducts} />} />
-            <Route exact path="/cart" component={Cart} />
-            <Route exact path="/admin" render={() => <Admin filteredProducts={filteredProducts} />} />
+              <Navbar products={products} setFilteredProducts={setFilteredProducts} />
+              {/* <Route exact path="/" component={Home} /> */}
+              <Route exact path="/" render={() => <Home filteredProducts={filteredProducts} />} />
+              <Route exact path="/cart" component={CartPage} />
+              <Route exact path="/admin" render={() => <Admin filteredProducts={filteredProducts} />} />
           </Provider>
         </Auth0Provider>
       </div>

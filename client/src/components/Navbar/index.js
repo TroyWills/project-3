@@ -4,22 +4,23 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { ShoppingCart } from "react-feather";
 import { useSelector } from "react-redux";
 import { getNumOfItemsInCart } from "../../utils/redux/cartSlice";
+import {Link} from "react-router-dom";
 
 function Navbar(props) {
   const { isAuthenticated, loginWithPopup } = useAuth0();
 
   const numOfItemsInCart = useSelector(getNumOfItemsInCart);
 
-  console.log("Number: " + numOfItemsInCart);
-
   function filter(category) {
     if (category === "all") {
       props.setFilteredProducts(props.products);
     } else {
-      let newList = props.products.filter((product) => product.category === category)
-  
+      let newList = props.products.filter(
+        (product) => product.category === category
+      );
+
       console.log(newList);
-  
+
       props.setFilteredProducts(newList);
     }
   }
@@ -59,32 +60,56 @@ function Navbar(props) {
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <li>
-                  <a onClick={() => filter("all")}class="dropdown-item" href="#">
+                  <a
+                    onClick={() => filter("all")}
+                    class="dropdown-item"
+                    href="#"
+                  >
                     All
                   </a>
                 </li>
                 <li>
-                  <a onClick={() => filter("produce")}class="dropdown-item" href="#">
+                  <a
+                    onClick={() => filter("produce")}
+                    class="dropdown-item"
+                    href="#"
+                  >
                     Produce
                   </a>
                 </li>
                 <li>
-                  <a  onClick={() => filter("dairy")}class="dropdown-item" href="#">
+                  <a
+                    onClick={() => filter("dairy")}
+                    class="dropdown-item"
+                    href="#"
+                  >
                     Dairy
                   </a>
                 </li>
                 <li>
-                  <a onClick={() => filter("snacks")}class="dropdown-item" href="#">
+                  <a
+                    onClick={() => filter("snacks")}
+                    class="dropdown-item"
+                    href="#"
+                  >
                     Snacks
                   </a>
                 </li>
                 <li>
-                  <a onClick={() => filter("drinks")}class="dropdown-item" href="#">
+                  <a
+                    onClick={() => filter("drinks")}
+                    class="dropdown-item"
+                    href="#"
+                  >
                     Drink
                   </a>
                 </li>
                 <li>
-                  <a onClick={() => filter("personal")}class="dropdown-item" href="#">
+                  <a
+                    onClick={() => filter("personal")}
+                    class="dropdown-item"
+                    href="#"
+                  >
                     Personal Care
                   </a>
                 </li>
@@ -99,17 +124,19 @@ function Navbar(props) {
             )}
           </ul>
         </div>
-            <div className="cart">
-              {numOfItemsInCart > 0 ? (
-                <>
-                  <div className="cart_icon">{numOfItemsInCart}
-                  </div>
-                  <div className="cart_icon2">
-                    <a href="/cart"><ShoppingCart /></a>
-                  </div>
-                </>
-              ): null}
-            </div>
+        <div className="cart">
+          {numOfItemsInCart > 0 ? (
+            <>
+              <div className="cart_icon">{numOfItemsInCart}</div>
+              <div className="cart_icon2">
+                {/* <a href="/cart"><ShoppingCart /></a> */}
+                <Link to="/cart">
+                  <ShoppingCart />
+                </Link>
+              </div>
+            </>
+          ) : null}
+        </div>
       </div>
     </nav>
   );

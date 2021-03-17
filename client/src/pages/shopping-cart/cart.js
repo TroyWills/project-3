@@ -1,130 +1,66 @@
-import React, { Component } from "react";
-// import { CardNumberElement, CardExpiryElement, CardCvcElement } from 'react-stripe-elements'
+import { useEffect, useState } from 'react';
+import { ArrowLeft } from "react-feather";
+import { getNumOfItemsInCart, getTotalCostInCart } from "../../utils/redux/cartSlice";
+import { ToastProvider } from "react-toast-notifications";
+import { useSelector } from "react-redux";
+import Cart from "../../components/Cart/cart";
+import "./style.css";
+import { Link } from "react-router-dom";
+import OrderSummary from '../../components/OrderSummary/orderSummary'
 
+const CartPage = () => {
+  const numOfItemsInCart = useSelector(getNumOfItemsInCart);
+  const cartItems = useSelector((state) => state.cart);
+  const totalCostInCart = useSelector(getTotalCostInCart);
 
+  const [showOrderSummary, setShowOrderSummary] = useState(false);
 
-// import './checkout-page.css';
-// import Footer from "../components/footer";
-class Cart extends Component {
-  render() {
-    return (
-      <>
-        <div className="shopping-cart">
-          <div className="title">
-            Shopping Bag
+  useEffect(() => {
+    totalCostInCart <= 0
+      ? setShowOrderSummary(false)
+      : setShowOrderSummary(true);
+  }, [totalCostInCart]);
+
+  console.log(numOfItemsInCart);
+  return (
+    <div className="cart">
+      <div className="cart_details">
+        <div className="continue_shopping">
+          <Link to="/">
+            <ArrowLeft />
+            Continue Shopping
+          </Link>
+        </div>
+        <div className="checkout_heading">
+          <div className="heading">Cart</div>
+          <div>
+            You have {numOfItemsInCart} item{numOfItemsInCart === 1 ? "" : "s"}{" "}
+            in your cart
+          </div>
+        </div>
+        <div className="cart_list">
+          {cartItems.map((item) => (
+            <Cart
+              key={item.name}
+              name={item.name}
+              // description={item.description}
+              price={item.price}
+              img={item.img}
+              width={item.width}
+              quantity={item.quantity}
+            />
+          ))}
+        </div>
       </div>
-          {/* <CardNumberElement /> */}
+      {showOrderSummary && (
+        <div className="order_summary">
+          <ToastProvider placement="top-center">
+            <OrderSummary />
+          </ToastProvider>
         </div>
+      )}
+    </div>
+  );
+};
 
-        <div className="item">
-          <div className="buttons">
-            <span className="delete-btn"></span>
-            <span className="like-btn"></span>
-          </div>
-
-          <div className="image">
-            <img src="item-1.png" alt="" />
-          </div>
-
-          <div className="description">
-            <span>Produce</span>
-            <span>eggs</span>
-
-          </div>
-
-          <div className="quantity">
-            <button className="plus-btn" type="button" name="button">
-              +
-          </button>
-            <input type="text" name="name" value="1" />
-            <button className="minus-btn" type="button" name="button">
-              -
-          </button>
-          </div>
-
-          <div className="total-price">{ }</div>
-        </div>
-
-
-        <div className="item">
-          <div className="buttons">
-            <span className="delete-btn"></span>
-            <span className="like-btn"></span>
-          </div>
-
-          <div className="image">
-            <img src="item-2.png" alt="" />
-          </div>
-
-          <div className="description">
-            <span>Dairy</span>
-            <span>Milk</span>
-
-          </div>
-
-          <div className="quantity">
-            <button className="plus-btn" type="button" name="button">
-              +
-          </button>
-            <input type="text" name="name" value="1" />
-            <button className="minus-btn" type="button" name="button">
-              -
-          </button>
-          </div>
-
-        </div>
-
-
-        <div className="item">
-          <div className="buttons">
-            <span class="delete-btn"></span>
-            <span class="like-btn"></span>
-          </div>
-
-          <div className="image">
-            img src
-        </div>
-
-          <div className="description">
-            <span>Beverages</span>
-            <span>Water</span>
-            <span>Brown</span>
-          </div>
-
-          <div className="quantity">
-            <button className="plus-btn" type="button" name="button">
-              +
-          </button>
-            <input type="text" name="name" value="1" />
-            <button className="minus-btn" type="button" name="button">
-              -
-          </button>
-          </div>
-
-          <div className="total-price">PRICE</div>
-        </div>
-        <div className="Card-Details">
-
-        </div>
-
-        <form action="/action_page.php" method="get">
-          <label for="fname">Name on card</label>
-          <input type="text" id="fname" name="fname" />
-          <label for="lname">Card information</label>
-          {/* <CardNumberElement /> */}
-          <label for="fname">Expiration Date</label>
-          {/* <CardExpiryElement /> */}
-          <label for="fname">CVV</label>
-          {/* <CardCvcElement /> */}
-          <div className="checkout-button">
-            <button className="checkout" type="button" name="button">
-              Checkout
-              </button>
-          </div>
-        </form>
-      </>
-    )
-  }
-}
-
-export default Cart
+export default CartPage;
