@@ -13,8 +13,7 @@ const ItemCard = ({ name, img, width, price, _id }) => {
     axios.delete('/api/grocery/' + id)
       .then(() => {
         console.log("works!")
-      }
-      )
+      })
       .catch(err => console.log(err));
   }
 
@@ -30,9 +29,7 @@ const ItemCard = ({ name, img, width, price, _id }) => {
         <h3>{price}</h3>
         {/* Add Button to delete item from page here */}
           <button type="button" className="btn btn-danger"
-            onClick={(_id) => 
-              deleteItem
-            }>
+            onClick={() => deleteItem(_id)}>
             Remove Item
 
               

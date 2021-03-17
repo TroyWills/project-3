@@ -4,7 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { ShoppingCart } from "react-feather";
 import { useSelector } from "react-redux";
 import { getNumOfItemsInCart } from "../../utils/redux/cartSlice";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navbar(props) {
   const { isAuthenticated, loginWithPopup } = useAuth0();
@@ -26,10 +26,10 @@ function Navbar(props) {
   }
 
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
         <button
-          class="pull-left navbar-toggler"
+          className="pull-left navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown"
@@ -37,16 +37,16 @@ function Navbar(props) {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="/">
+        <a className="navbar-brand" href="/">
           The Mini Mart
         </a>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 href="#"
                 id="navbarDropdownMenuLink"
                 role="button"
@@ -56,13 +56,13 @@ function Navbar(props) {
                 Categories
               </a>
               <ul
-                class="dropdown-menu"
+                className="dropdown-menu"
                 aria-labelledby="navbarDropdownMenuLink"
               >
                 <li>
                   <a
                     onClick={() => filter("all")}
-                    class="dropdown-item"
+                    className="dropdown-item"
                     href="#"
                   >
                     All
@@ -71,7 +71,7 @@ function Navbar(props) {
                 <li>
                   <a
                     onClick={() => filter("produce")}
-                    class="dropdown-item"
+                    className="dropdown-item"
                     href="#"
                   >
                     Produce
@@ -80,7 +80,7 @@ function Navbar(props) {
                 <li>
                   <a
                     onClick={() => filter("dairy")}
-                    class="dropdown-item"
+                    className="dropdown-item"
                     href="#"
                   >
                     Dairy
@@ -89,7 +89,7 @@ function Navbar(props) {
                 <li>
                   <a
                     onClick={() => filter("snacks")}
-                    class="dropdown-item"
+                    className="dropdown-item"
                     href="#"
                   >
                     Snacks
@@ -98,7 +98,7 @@ function Navbar(props) {
                 <li>
                   <a
                     onClick={() => filter("drinks")}
-                    class="dropdown-item"
+                    className="dropdown-item"
                     href="#"
                   >
                     Drink
@@ -107,7 +107,7 @@ function Navbar(props) {
                 <li>
                   <a
                     onClick={() => filter("personal")}
-                    class="dropdown-item"
+                    className="dropdown-item"
                     href="#"
                   >
                     Personal Care
@@ -116,8 +116,8 @@ function Navbar(props) {
               </ul>
             </li>
             {!isAuthenticated && (
-              <li class="nav-item">
-                <a class="nav-link" href="#" onClick={loginWithPopup}>
+              <li className="nav-item">
+                <a className="nav-link" href="#" onClick={loginWithPopup}>
                   Login
                 </a>
               </li>
