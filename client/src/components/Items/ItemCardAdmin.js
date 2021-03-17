@@ -6,13 +6,14 @@ import { MinusCircle, PlusCircle } from "react-feather";
 import axios from "axios";
 
 
-const ItemCard = ({ name, img, width, price, _id }) => {
-  
-  function deleteItem(id) {
-    console.log(id);
+const ItemCardAdmin = ({ name, img, width, price, _id }) => {
+  function deleteItem(e) {
+    // this was working --> console.log(e.target.id)
+    const id = e.target.id;
     axios.delete('/api/grocery/' + id)
-      .then(() => {
-        console.log("works!")
+      .then((data) => {
+        alert("Item deleted!");
+        window.location.reload();
       })
       .catch(err => console.log(err));
   }
@@ -28,17 +29,16 @@ const ItemCard = ({ name, img, width, price, _id }) => {
         {/* <h3>{description}</h3> */}
         <h3>{price}</h3>
         {/* Add Button to delete item from page here */}
-          <button type="button" className="btn btn-danger"
-            onClick={() => deleteItem(_id)}>
-            Remove Item
+        <button type="button" className="btn btn-danger" id={_id}
+          onClick={deleteItem}>
+          Remove Item
 
-              
           </button>
-            
+
 
       </div>
     </div>
   );
 };
 
-export default ItemCard;
+export default ItemCardAdmin;

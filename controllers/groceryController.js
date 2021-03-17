@@ -21,20 +21,15 @@ module.exports = {
             })
             .catch(err => res.status(422).json(err));
     },
+
     deleteItem: function (req, res) {
+        console.log(req.params.id);
         db.Grocery
             .deleteOne({ _id: req.params.id })
-            .then(function (err, data) {
-                if (err) throw err;
+            .then(function (data) {
                 console.log("delete data", data);
                 res.json(data)
             })
-            .catch(err => res.status(422).json(err));
-    },
-    create: function (req, res) {
-        db.Grocery
-            .create(req.body)
-            .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     }
 }
