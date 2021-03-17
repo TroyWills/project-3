@@ -1,24 +1,9 @@
 // import { useEffect, useState } from "react";
+import ItemCardAdmin from "../../components/Items/ItemCardAdmin";
 import ItemCard from "../../components/Items/ItemCardAdmin"
 import "./style.css";
 
 const Admin = (props) => {
-  // const [products, setProducts] = useState();
-  // const [filteredProducts, setFilteredProducts] = useState();
-
-  // useEffect(() => {
-  //   getProducts();
-  // }, []);
-
-  // const getProducts = async () => {
-  //   await fetch("/api/grocery")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setProducts(data);
-  //       setFilteredProducts(data);
-  //     })
-  //     .catch((err) => err.message);
-  // };
 
   return (
     <div className="body">
@@ -27,7 +12,8 @@ const Admin = (props) => {
         {props.filteredProducts &&
           props.filteredProducts.map((product) => {
             return (
-              <ItemCard
+              <ItemCardAdmin
+                _id={product._id}
                 key={product.name}
                 img={product.img}
                 name={product.name}
