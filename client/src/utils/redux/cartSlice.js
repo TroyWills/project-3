@@ -38,6 +38,12 @@ export const getItemQuantity = (state, name) =>
 export const getNumOfItemsInCart = (state) =>
   state.cart.reduce((accum, currItem) => accum + currItem.quantity, 0);
 
+export const getTotalCostInCart = (state) =>
+  state.cart.reduce(
+    (accum, currItem) => accum + currItem.price * currItem.quantity,
+    0
+  );
+
 const { actions, reducer } = cartSlice;
 
 export const { AddToCart, UpdateQuantity, RemoveFromCart } = actions;
