@@ -3,6 +3,7 @@ import { useToasts } from "react-toast-notifications";
 import "./style.css";
 import {
   DELIVERY_FEE,
+  MISSING_CVC,
   ORDER_MINIMUM_ERROR,
   THE_MINI_DEMO_INFO,
 } from "../../utils/helper";
@@ -14,8 +15,9 @@ import axios from 'axios'
 
 
 const OrderSummary = (props) => {
+
   const stripe = props.stripe
-  console.log(stripe)
+
   const submit = async (ev) => {
     console.log(stripe)
     let { token } = await stripe.createToken({ name: "Name" });
@@ -70,8 +72,20 @@ const OrderSummary = (props) => {
       </div>
       <div
         className="checkout"
-        onClick={submit}
-      >
+        onClick={submit}>
+        {/* {
+          if (totalCostInCart < 10) {
+            addToast(ORDER_MINIMUM_ERROR, {
+              appearance: "error",
+              autoDismiss: true,
+            });
+          } else {
+            addToast(THE_MINI_DEMO_INFO, {
+              appearance: "success",
+              autoDismiss: true,
+            });
+          }
+        }} */}
         <div>Checkout</div>
       </div>
     </div>
