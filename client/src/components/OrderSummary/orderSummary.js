@@ -4,7 +4,7 @@ import "./style.css";
 import {
   DELIVERY_FEE,
   ORDER_MINIMUM_ERROR,
-  ZERO_MINI_DEMO_INFO,
+  THE_MINI_DEMO_INFO,
 } from "../../utils/helper";
 
 import { getTotalCostInCart } from "../../utils/redux/cartSlice";
@@ -53,7 +53,7 @@ const OrderSummary = () => {
               autoDismiss: true,
             });
           } else {
-            addToast(ZERO_MINI_DEMO_INFO, {
+            addToast(THE_MINI_DEMO_INFO, {
               appearance: "success",
               autoDismiss: true,
             });
