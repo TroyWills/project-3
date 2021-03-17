@@ -25,7 +25,7 @@ export const cartSlice = createSlice({
 });
 
 export const getCurrentItem = (state, action) =>
-  state.cart.find((item) => item.name === action.payload.name);
+  state.find((item) => item.name === action.payload.name);
 
 export const removeFromCart = (state, name) => {
   const indexToRemove = state.findIndex((item) => item.name === name);
