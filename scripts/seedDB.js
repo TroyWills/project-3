@@ -7,88 +7,99 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/grocerylist");
 
 const grocerySeed = [
   {
-    name: "Onion",
+    name: "Onions",
     price: 1.99,
+    description: "a pound of onions",
     category: "produce",
     quantity: 10,
-    img: "http://clipart-library.com/image_gallery2/Onion-PNG-File.png",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnQtiqsj3_QQ1MxTRQ7jqLg2AqySal_ywFgmruxkElB15_UP-W&s",
     width: "90px",
   },
   {
-    name: "Banana",
+    name: "Bananas",
     price: 0.99,
+    description:"a pound of bananas",
     category: "produce",
     quantity: 10,
-    img: "http://clipart-library.com/image_gallery2/Banana-Free-PNG-Image.png",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvGoVgPy-LinCzcrL1VnT3nIUIz2Yw3VuHP0YoHnnpUqhmwP0&s",
     width: "100px",
   },
   {
     name: "Asparagus",
     price: 2.99,
+    description:"a pound of asparagus",
     category: "produce",
     quantity: 10,
-    img: "http://clipart-library.com/newhp/Asparagus-PNG-Clipart.png",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2XJBVNirjstwiuVdTLXVBJUow7viJd_wBsgjUYu3Lfo6Nbms&s",
     width: "110px",
   },
   {
-    name: "Strawberry",
+    name: "Strawberries",
     price: 3.99,
+    description:"a package of strawberries",
     category: "produce",
     quantity: 10,
-    img: "http://clipart-library.com/images_k/strawberries-transparent/strawberries-transparent-5.png",
+    img: "https://media.istockphoto.com/photos/strawberries-picture-id174262076?k=6&m=174262076&s=612x612&w=0&h=p16FtlZj_ZN3erHL__A_UA8bDrq28GG9udj5lr4xiDc=",
     width: "90px",
   },
   {
     name: "Tomatoes",
     price: 1.5,
+    description:"a pound of tomatoes",
     category: "produce",
     quantity: 10,
-    img: "http://clipart-library.com/image_gallery/n823677.png",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL4Q94pUs0abcGuNV6euUHJQRL3Vj0msp0-eCjHsdr8Zp1G5I&s",
     width: "100px",
   },
   {
     name: "Milk",
     price: 2.99,
+    description:"a gallon of milk",
     category: "dairy",
     quantity: 10,
-    img: "http://clipart-library.com/images/BpT5kM7i9.png",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThq00_JkSIRtN_Aa7pEwplx1w8gaZpw_5prmss4UprfE2qAlE&s",
   
   },
   {
     name: "Yogurt",
-    price: 2.99,
+    price: 1.50,
+    description:"",
     category: "dairy",
     quantity: 10,
-    img: "http://clipart-library.com/data_images/472474.png",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ03skB9xzedXVGjh-EkM8KOnsRKwGx3TVPiynNkbIdqJzRnQ8&s",
     width: "70px",
   },
   {
     name: "Cheese",
-    price: 2.99,
+    price: 7.99,
+    description:"a pound of cheese",
     category: "dairy",
     quantity: 10,
-    img: "http://clipart-library.com/images_k/cheese-transparent/cheese-transparent-4.png",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYojVpgKY5AubxohRD6FdguhWMVVxXm12XvBtaVPjJSb796yij&s",
     width: "80px",
   },
   {
     name: "Butter",
-    price: 2.99,
+    price: 1.99,
+    description:"a stick of butter",
     category: "dairy",
     quantity: 10,
-    img: "http://clipart-library.com/image_gallery2/Butter-PNG-Clipart.png",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS61_wBFP_2-dW-asYEViq0eRjDDpVpon6aUVBqiXNpIIfvupY&s",
     width: "100px",
   },
   {
-    name: "Ice Cream",
-    price: 2.99,
+    name: "Strawberry Ice Cream",
+    price: 5.99,
+    description:"48oz tub of ice cream",
     category: "dairy",
     quantity: 10,
-    img: "http://clipart-library.com/img/865592.jpg",
+    img: "https://media.istockphoto.com/vectors/icecream-inside-the-disposable-cup-vector-id512476873?k=6&m=512476873&s=612x612&w=0&h=rjs_NsSA8d6IH3D2unZsPcpSKuzJl6mEOCm_DHUVMlI=",
     width: "60px",
   },
   {
     name: "Potato Chips",
-    price: 2.5,
+    price: 2.50,
+    description:"8oz bag of potato chips",
     category: "snacks",
     quantity: 10,
     img:
@@ -98,15 +109,17 @@ const grocerySeed = [
   {
     name: "Chocolate Chip Cookies",
     price: 1.99,
+    description:"a 3 pack bag",
     category: "snacks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJAIaJGaTCn7FEW2zsHT5EAkt5ZZyuQviNAaOVjEY-EJMsQW0&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_A48eob5fwRsW4gx6jOQevrBiHAgcPYDhTOYyQh9He3zv9jA&s",
     width: "100px",
   },
   {
     name: "PopCorn ",
     price: 2.99,
+    description:"8oz package of popcorn",
     category: "snacks",
     quantity: 10,
     img:
@@ -116,6 +129,7 @@ const grocerySeed = [
   {
     name: "Chex Mix",
     price: 2.99,
+    description:"4oz bag of chex mix",
     category: "snacks",
     quantity: 10,
     img:
@@ -123,8 +137,9 @@ const grocerySeed = [
     width: "100px",
   },
   {
-    name: "Fruit Snack",
+    name: "Fruit Snacks",
     price: 2.99,
+    description:"4oz package of fruit snacks",
     category: "snacks",
     quantity: 10,
     img:
@@ -133,7 +148,8 @@ const grocerySeed = [
   },
   {
     name: "Water",
-    price: 2.99,
+    price: 1.50,
+    description:"16oz bottle of water",
     category: "drinks",
     quantity: 10,
     img:
@@ -142,7 +158,8 @@ const grocerySeed = [
   },
   {
     name: "Pepsi",
-    price: 2.99,
+    price: 0.99,
+    description:"12oz can of pepsi",
     category: "drinks",
     quantity: 10,
     img:
@@ -151,7 +168,8 @@ const grocerySeed = [
   },
   {
     name: "Red Bull",
-    price: 2.99,
+    price: 3.99,
+    description:"12oz can of red bull",
     category: "drinks",
     quantity: 10,
     img:
@@ -160,7 +178,8 @@ const grocerySeed = [
   },
   {
     name: "Sprite",
-    price: 2.99,
+    price: 0.99,
+    description:"12oz can of sprite",
     category: "drinks",
     quantity: 10,
     img:
@@ -169,7 +188,8 @@ const grocerySeed = [
   },
   {
     name: "Orange Juice",
-    price: 2.99,
+    price: 1.99,
+    description:"12oz bottle of orange juice",
     category: "drinks",
     quantity: 10,
     img:
@@ -178,7 +198,8 @@ const grocerySeed = [
   },
   {
     name: "Toilet Paper",
-    price: 2.99,
+    price: 3.99,
+    description:"6 rolls of toilet paper",
     category: "personal",
     quantity: 10,
     img:
@@ -187,7 +208,8 @@ const grocerySeed = [
   },
   {
     name: "Deodorant",
-    price: 2.99,
+    price: 4.99,
+    description:"a stick of deodorant",
     category: "personal",
     quantity: 10,
     img:
@@ -197,6 +219,7 @@ const grocerySeed = [
   {
     name: "Toothpaste",
     price: 2.99,
+    description:"6oz package of toothpaste",
     category: "personal",
     quantity: 10,
     img:
@@ -204,17 +227,18 @@ const grocerySeed = [
     width: "100px",
   },
   {
-    name: "Body Wash",
+    name: "Shampoo",
     price: 2.99,
+    description:"",
     category: "personal",
     quantity: 10,
-    img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTshC_PDzbnlfoNN0bLq3gfUmHPn28yoHr_OI46kt2WpBymXcUQ&s",
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKUBNco8zn2ntWuZ6c4ezc8UetNjpIpbIL3A&usqp=CAU",
     width: "100px",
   },
   {
     name: "Tooth Brush",
     price: 2.99,
+    description:"",
     category: "personal",
     quantity: 10,
     img:
