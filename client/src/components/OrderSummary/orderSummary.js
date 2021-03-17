@@ -3,16 +3,42 @@ import { useToasts } from "react-toast-notifications";
 import "./style.css";
 import {
   DELIVERY_FEE,
+  MISSING_CVC,
   ORDER_MINIMUM_ERROR,
   THE_MINI_DEMO_INFO,
 } from "../../utils/helper";
 
 import { getTotalCostInCart } from "../../utils/redux/cartSlice";
+import { injectStripe, CardCVCElement, CardExpiryElement, CardNumberElement, Elements } from "react-stripe-elements";
+import Submit from "../../CheckoutForm";
+import axios from 'axios'
 
-const OrderSummary = () => {
+
+const OrderSummary = (props) => {
+
+  const stripe = props.stripe
+
+  const submit = async (ev) => {
+    console.log(stripe)
+    let { token } = await stripe.createToken({ name: "Name" });
+    console.log(token)
+    await axios.post('/charge', {
+      headers: { "Content-Type": "text/plain" },
+      token: token.id,
+      amount: totalCharge,
+    }
+    ).then(res => {
+      if (res.status === 200) {
+        console.log(res)
+      }
+    })
+      .catch(err => console.log(err))
+  }
+
   const totalCostInCart = useSelector(getTotalCostInCart);
+  const totalCharge = ((totalCostInCart + DELIVERY_FEE) * 100).toFixed(0)
   const { addToast } = useToasts();
-  console.log(totalCostInCart);
+  console.log(totalCharge);
   return (
     <div className="order_summary">
       <div className="heading">Card details</div>
@@ -20,15 +46,15 @@ const OrderSummary = () => {
         <div className="input_title">Name on card</div>
         <input className="input" />
         <div className="input_title">Card information</div>
-        <input className="input" />
+        <CardNumberElement />
         <div className="exp_cvv">
           <div>
             <div className="input_title">Expiration Date</div>
-            <input className="input" />
+            <CardExpiryElement />
           </div>
           <div>
             <div className="input_title">CVV</div>
-            <input className="input" />
+            <CardCVCElement />
           </div>
         </div>
       </div>
@@ -46,7 +72,8 @@ const OrderSummary = () => {
       </div>
       <div
         className="checkout"
-        onClick={() => {
+        onClick={submit}>
+        {/* {
           if (totalCostInCart < 10) {
             addToast(ORDER_MINIMUM_ERROR, {
               appearance: "error",
@@ -58,12 +85,11 @@ const OrderSummary = () => {
               autoDismiss: true,
             });
           }
-        }}
-      >
+        }} */}
         <div>Checkout</div>
       </div>
     </div>
   );
 };
 
-export default OrderSummary;
+export default injectStripe(OrderSummary);

@@ -4,15 +4,14 @@ import './index.css';
 import App from './App';
 // import { StripeProvider, Elements } from 'react-stripe-elements'
 import reportWebVitals from './reportWebVitals';
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js'
 
-const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_TEST_APIKEY)
+
+
 ReactDOM.render(
 
-  <Elements stripe={stripePromise}>
-    <App />
-  </Elements>
+
+  <App />
+
   ,
   document.getElementById('root')
 );
