@@ -8,9 +8,7 @@ import { getNumOfItemsInCart } from "../../utils/redux/cartSlice";
 function Navbar(props) {
   const { isAuthenticated, loginWithPopup } = useAuth0();
 
-  const numOfItemsInCart = useSelector(getNumOfItemsInCart);
-
-  console.log("Number: " + numOfItemsInCart);
+  const numOfItemsInCart = useSelector(getNumOfItemsInCart)
 
   function filter(category) {
     if (category === "all") {
