@@ -31,5 +31,12 @@ module.exports = {
                 res.json(data)
             })
             .catch(err => res.status(422).json(err));
+    },
+
+    create: function (req, res) {
+        db.Grocery
+            .create(req.body)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     }
 }
