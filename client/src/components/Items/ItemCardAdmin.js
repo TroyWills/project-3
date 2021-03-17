@@ -1,8 +1,4 @@
-import { useState, useEffect } from "react";
 import "./style.css";
-import { useDispatch, useSelector } from "react-redux";
-import { AddToCart, UpdateQuantity, getItemQuantity } from "../../utils/redux/cartSlice";
-import { MinusCircle, PlusCircle } from "react-feather";
 import axios from "axios";
 
 
@@ -18,7 +14,6 @@ const ItemCardAdmin = ({ name, img, width, price, _id }) => {
       .catch(err => console.log(err));
   }
 
-
   return (
     <div className="item">
       <div className="imgContainer">
@@ -32,10 +27,7 @@ const ItemCardAdmin = ({ name, img, width, price, _id }) => {
         <button type="button" className="btn btn-danger" id={_id}
           onClick={deleteItem}>
           Remove Item
-
           </button>
-
-
       </div>
     </div>
   );
