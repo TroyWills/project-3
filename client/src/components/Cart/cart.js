@@ -19,7 +19,7 @@ const Cart = ({
           <div className="image">
             <img src={img} width={width} />
           </div>
-          <div className="styles.description">
+          <div className="description">
             <div className="item_name"> {name} </div>
             {/* <div>{description}</div> */}
           </div>

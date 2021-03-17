@@ -1,0 +1,49 @@
+.order_summary {
+    margin: 20px;
+    padding: 20px;
+  }
+  .heading {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .input_title {
+    margin-bottom: 12px;
+  }
+  .input {
+    height: 30px;
+    background-color: #cfbfb9;
+    border: 0px solid;
+    margin-bottom: 12px;
+  }
+  .exp_cvv {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .subtotal,
+  .delivery_fee,
+  .total_cost {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .checkout {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cfbfb9;
+    padding: 20px;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  

@@ -1,29 +1,40 @@
-import { ArrowLeft } from 'react-feather'
-import {getNumOfItemsInCart} from '../../utils/redux/cartSlice'
-import {useSelector} from 'react-redux'
-import Cart from '../../components/Cart/cart'
+import { useEffect, useState } from 'react';
+import { ArrowLeft } from "react-feather";
+import { getNumOfItemsInCart, getTotalCostInCart } from "../../utils/redux/cartSlice";
+import { ToastProvider } from "react-toast-notifications";
+import { useSelector } from "react-redux";
+import Cart from "../../components/Cart/cart";
 import "./style.css";
-import {Link} from "react-router-dom"
-const CartPage = () => {
+import { Link } from "react-router-dom";
+import OrderSummary from '../../components/OrderSummary/orderSummary'
 
+const CartPage = () => {
   const numOfItemsInCart = useSelector(getNumOfItemsInCart);
   const cartItems = useSelector((state) => state.cart);
-  // const totalCostInCart = useSelector(getTotalCostInCart)
+  const totalCostInCart = useSelector(getTotalCostInCart);
 
-  console.log(numOfItemsInCart)
+  const [showOrderSummary, setShowOrderSummary] = useState(false);
+
+  useEffect(() => {
+    totalCostInCart <= 0
+      ? setShowOrderSummary(false)
+      : setShowOrderSummary(true);
+  }, [totalCostInCart]);
+
+  console.log(numOfItemsInCart);
   return (
     <div className="cart">
       <div className="cart_details">
         <div className="continue_shopping">
           <Link to="/">
             <ArrowLeft />
-              Continue Shopping
-              </Link>
+            Continue Shopping
+          </Link>
         </div>
         <div className="checkout_heading">
           <div className="heading">Cart</div>
           <div>
-            You have {numOfItemsInCart} item{numOfItemsInCart === 1 ? '' : 's'}{' '}
+            You have {numOfItemsInCart} item{numOfItemsInCart === 1 ? "" : "s"}{" "}
             in your cart
           </div>
         </div>
@@ -41,8 +52,15 @@ const CartPage = () => {
           ))}
         </div>
       </div>
+      {showOrderSummary && (
+        <div className="order_summary">
+          <ToastProvider placement="top-center">
+            <OrderSummary />
+          </ToastProvider>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default CartPage
+export default CartPage;
