@@ -19,9 +19,9 @@ const OrderSummary = (props) => {
   const stripe = props.stripe
 
   const submit = async (ev) => {
-    console.log(stripe)
+    // console.log(stripe)
     let { token } = await stripe.createToken({ name: "Name" });
-    console.log(token)
+    // console.log(token)
     await axios.post('/charge', {
       headers: { "Content-Type": "text/plain" },
       token: token?.id,
@@ -47,7 +47,7 @@ const OrderSummary = (props) => {
   const totalCostInCart = useSelector(getTotalCostInCart);
   const totalCharge = ((totalCostInCart + DELIVERY_FEE) * 100).toFixed(0)
   const { addToast } = useToasts();
-  console.log(totalCharge);
+  // console.log(totalCharge);
   return (
     <div className="order_summary">
       <div className="heading">Card details</div>

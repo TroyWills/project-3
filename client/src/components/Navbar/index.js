@@ -19,7 +19,7 @@ function Navbar(props) {
         (product) => product.category === category
       );
 
-      console.log(newList);
+      // console.log(newList);
 
       props.setFilteredProducts(newList);
     }
@@ -123,7 +123,7 @@ function Navbar(props) {
               </li>
             )}
             {isAuthenticated && (
-             <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="/" onClick={logout}>
                   Logout
                 </a>

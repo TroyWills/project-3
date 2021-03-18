@@ -22,7 +22,7 @@ const CartPage = (props) => {
       : setShowOrderSummary(true);
   }, [totalCostInCart]);
 
-  console.log(numOfItemsInCart);
+  // console.log(numOfItemsInCart);
   return (
     <Elements>
       <div className="cart">
