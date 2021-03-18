@@ -12,7 +12,7 @@ const grocerySeed = [
     description: "a pound of onions",
     category: "produce",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnQtiqsj3_QQ1MxTRQ7jqLg2AqySal_ywFgmruxkElB15_UP-W&s",
+    img: "https://i.imgur.com/jIskQjS.png",
     width: "90px",
   },
   {
@@ -21,11 +21,11 @@ const grocerySeed = [
     description:"a pound of bananas",
     category: "produce",
     quantity: 10,
-    img: "../client/public/assets/banana.png",
+    img: "https://i.imgur.com/IjWFTNr.png",
     width: "100px",
   },
   {
-    name: "Asparagus",
+    name: "Spinach",
     price: 2.99,
     description:"a pound of asparagus",
     category: "produce",
@@ -48,7 +48,7 @@ const grocerySeed = [
     description:"a pound of tomatoes",
     category: "produce",
     quantity: 10,
-    img: "../client/public/assets/tomato.png",
+    img: "https://i.imgur.com/1xXpSGj.png",
     width: "100px",
   },
   {
@@ -75,7 +75,7 @@ const grocerySeed = [
     description:"a pound of cheese",
     category: "dairy",
     quantity: 10,
-    img: "../client/public/assets/cheese.png",
+    img: "https://i.imgur.com/fYNEs6U.png",
     width: "80px",
   },
   {
