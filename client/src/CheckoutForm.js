@@ -19,7 +19,7 @@ const CheckoutForm = (props) => {
         }
         ).then(res => {
             if (res.status === 200) {
-                console.log(res)
+                // console.log(res)
                 setComplete(!complete)
 
             }

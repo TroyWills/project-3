@@ -13,7 +13,7 @@ const AddForm = () => {
     function handleFormSubmit(event) {
         event.preventDefault();
         if (formObject.name && formObject.price && formObject.category && formObject.quantity) {
-            console.log(formObject)
+            // console.log(formObject)
             axios.post('/api/grocery', {
                 name: formObject.name,
                 price: formObject.price,
