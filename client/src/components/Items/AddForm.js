@@ -1,8 +1,8 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 
-const AddForm = (props) => {
+const AddForm = () => {
     const [formObject, setFormObject] = useState({})
 
     function handleInputChange(event) {
@@ -22,7 +22,7 @@ const AddForm = (props) => {
                 description: formObject.description,
                 img: formObject.imageUrl
             })
-                .then(res => console.log(res))
+                .then(window.location.reload())
                 .catch(err => console.log(err));
         }
 
