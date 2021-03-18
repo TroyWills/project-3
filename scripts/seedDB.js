@@ -21,7 +21,7 @@ const grocerySeed = [
     description:"a pound of bananas",
     category: "produce",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvGoVgPy-LinCzcrL1VnT3nIUIz2Yw3VuHP0YoHnnpUqhmwP0&s",
+    img: "../client/public/assets/banana.png",
     width: "100px",
   },
   {
@@ -48,7 +48,7 @@ const grocerySeed = [
     description:"a pound of tomatoes",
     category: "produce",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL4Q94pUs0abcGuNV6euUHJQRL3Vj0msp0-eCjHsdr8Zp1G5I&s",
+    img: "../client/public/assets/tomato.png",
     width: "100px",
   },
   {
@@ -57,7 +57,7 @@ const grocerySeed = [
     description:"a gallon of milk",
     category: "dairy",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThq00_JkSIRtN_Aa7pEwplx1w8gaZpw_5prmss4UprfE2qAlE&s",
+    img: "../client/public/assets/milk.png",
   
   },
   {
@@ -66,7 +66,7 @@ const grocerySeed = [
     description:"6oz of yogurt",
     category: "dairy",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ03skB9xzedXVGjh-EkM8KOnsRKwGx3TVPiynNkbIdqJzRnQ8&s",
+    img: "../client/public/assets/yogurt.png",
     width: "70px",
   },
   {
@@ -75,7 +75,7 @@ const grocerySeed = [
     description:"a pound of cheese",
     category: "dairy",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYojVpgKY5AubxohRD6FdguhWMVVxXm12XvBtaVPjJSb796yij&s",
+    img: "../client/public/assets/cheese.png",
     width: "80px",
   },
   {
@@ -84,16 +84,16 @@ const grocerySeed = [
     description:"a stick of butter",
     category: "dairy",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS61_wBFP_2-dW-asYEViq0eRjDDpVpon6aUVBqiXNpIIfvupY&s",
+    img: "../client/public/assets/butter.png",
     width: "100px",
   },
   {
-    name: "Strawberry Ice Cream",
+    name: "Ice Cream",
     price: 5.99,
     description:"48oz tub of ice cream",
     category: "dairy",
     quantity: 10,
-    img: "https://media.istockphoto.com/vectors/icecream-inside-the-disposable-cup-vector-id512476873?k=6&m=512476873&s=612x612&w=0&h=rjs_NsSA8d6IH3D2unZsPcpSKuzJl6mEOCm_DHUVMlI=",
+    img: "../client/public/assets/icecream.png",
     width: "60px",
   },
   {
@@ -113,7 +113,7 @@ const grocerySeed = [
     category: "snacks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_A48eob5fwRsW4gx6jOQevrBiHAgcPYDhTOYyQh9He3zv9jA&s",
+      "../client/public/assets/cookies.png",
     width: "100px",
   },
   {
@@ -123,7 +123,7 @@ const grocerySeed = [
     category: "snacks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz70fpfrAOhHs5_jSJxftxJOPjnhASejJc56HXQoJQvi6mEx3W&s",
+      "../client/public/assets/popcorn.png",
     width: "100px",
   },
   {
@@ -183,7 +183,7 @@ const grocerySeed = [
     category: "drinks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7TjMpWHa8Islj6rG8aJHHIpInDQpT-emReSMZw977LeQnUd2&s",
+      "../client/public/assets/sprite.png",
     width: "100px",
   },
   {
@@ -242,7 +242,7 @@ const grocerySeed = [
     category: "personal",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjhxPUBuQV25U6ezDYhkmtdHx0FUCNU2W-lvkz0_dlpbEwvCc&s",
+      "../client/public/assets/toothbrush.png",
     width: "",
   },
 ];
