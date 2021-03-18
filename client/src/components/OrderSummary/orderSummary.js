@@ -24,7 +24,7 @@ const OrderSummary = (props) => {
     console.log(token)
     await axios.post('/charge', {
       headers: { "Content-Type": "text/plain" },
-      token: token.id,
+      token: token?.id,
       amount: totalCharge,
     }
     ).then(res => {
