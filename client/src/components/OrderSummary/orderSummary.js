@@ -3,9 +3,9 @@ import { useToasts } from "react-toast-notifications";
 import "./style.css";
 import {
   DELIVERY_FEE,
-  MISSING_CVC,
   ORDER_MINIMUM_ERROR,
   THE_MINI_DEMO_INFO,
+  PAYMENT_ERROR,
 } from "../../utils/helper";
 
 import { getTotalCostInCart } from "../../utils/redux/cartSlice";
@@ -29,10 +29,19 @@ const OrderSummary = (props) => {
     }
     ).then(res => {
       if (res.status === 200) {
-        console.log(res)
+        addToast(THE_MINI_DEMO_INFO, {
+          appearance: "success",
+          autoDismiss: true,
+        });
       }
     })
-      .catch(err => console.log(err))
+      .catch(err => {
+        addToast(PAYMENT_ERROR, {
+          appearance: "error",
+          autoDismiss: true,
+        });
+        console.log(err)
+      })
   }
 
   const totalCostInCart = useSelector(getTotalCostInCart);
@@ -72,20 +81,14 @@ const OrderSummary = (props) => {
       </div>
       <div
         className="checkout"
-        onClick={submit}>
-        {/* {
+        onClick={() => {
           if (totalCostInCart < 10) {
             addToast(ORDER_MINIMUM_ERROR, {
               appearance: "error",
               autoDismiss: true,
             });
-          } else {
-            addToast(THE_MINI_DEMO_INFO, {
-              appearance: "success",
-              autoDismiss: true,
-            });
-          }
-        }} */}
+          } else { submit() }
+        }}>
         <div>Checkout</div>
       </div>
     </div>
