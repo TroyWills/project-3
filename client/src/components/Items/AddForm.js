@@ -19,7 +19,8 @@ const AddForm = (props) => {
                 price: formObject.price,
                 category: formObject.category,
                 quantity: formObject.quantity,
-                description: formObject.description
+                description: formObject.description,
+                img: formObject.imageUrl
             })
                 .then(res => console.log(res))
                 .catch(err => console.log(err));
@@ -64,6 +65,14 @@ const AddForm = (props) => {
                 <input
                     className="form-control"
                     onChange={handleInputChange}
+                    name="imageUrl"
+                    placeholder="image url (required)"
+                />
+            </div>
+            <div className="form-group">
+                <input
+                    className="form-control"
+                    onChange={handleInputChange}
                     name="description"
                     placeholder="Description (optional)"
                 />
@@ -73,6 +82,7 @@ const AddForm = (props) => {
                     && formObject.price
                     && formObject.category
                     && formObject.quantity
+                    && formObject.imageUrl
                 )}
                 onClick={handleFormSubmit}>
                 Add Grocery Item
