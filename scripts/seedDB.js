@@ -113,7 +113,7 @@ const grocerySeed = [
     category: "snacks",
     quantity: 10,
     img:
-      "",
+      "https://i.imgur.com/SM3eL6j.png",
     width: "100px",
   },
   {
@@ -123,7 +123,7 @@ const grocerySeed = [
     category: "snacks",
     quantity: 10,
     img:
-      "../client/public/assets/popcorn.png",
+      "https://i.imgur.com/PbnepMv.jpeg",
     width: "100px",
   },
   {
@@ -164,7 +164,7 @@ const grocerySeed = [
     quantity: 10,
     img:
       "https://i.imgur.com/uNETQei.png",
-    width: "100px",
+    width: "80px",
   },
   {
     name: "Red Bull",
@@ -173,7 +173,7 @@ const grocerySeed = [
     category: "drinks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpMnKOqsqQ1iFllGdOA83jbx2132cVlyJGUEjcSzuniCPIKA7U&s",
+      "https://i.imgur.com/0KON4HM.png",
     width: "100px",
   },
   {
@@ -193,7 +193,7 @@ const grocerySeed = [
     category: "drinks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtMR49nixhIVgNVKpggT7K5aClT6h9swba2GaOLgebCZNaqA&s",
+      "https://i.imgur.com/gvGsfyc.png",
     width: "100px",
   },
   {
@@ -223,7 +223,7 @@ const grocerySeed = [
     category: "personal",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60gfGvzUf6z4zRMZ_qd7ficTR8gREq_aecNxZFN1_TmAuLbo&s",
+      "https://i.imgur.com/WwobrKU.png",
     width: "100px",
   },
   {
@@ -232,7 +232,7 @@ const grocerySeed = [
     description:"24oz bottle of shampoo",
     category: "personal",
     quantity: 10,
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKUBNco8zn2ntWuZ6c4ezc8UetNjpIpbIL3A&usqp=CAU",
+    img:"https://i.imgur.com/1GmDloc.png",
     width: "100px",
   },
   {
@@ -242,7 +242,7 @@ const grocerySeed = [
     category: "personal",
     quantity: 10,
     img:
-      "../client/public/assets/toothbrush.png",
+      "https://i.imgur.com/gTqWQej.png",
     width: "",
   },
 ];
