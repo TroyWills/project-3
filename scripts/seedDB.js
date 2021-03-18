@@ -12,7 +12,7 @@ const grocerySeed = [
     description: "a pound of onions",
     category: "produce",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnQtiqsj3_QQ1MxTRQ7jqLg2AqySal_ywFgmruxkElB15_UP-W&s",
+    img: "https://i.imgur.com/jIskQjS.png",
     width: "90px",
   },
   {
@@ -21,16 +21,16 @@ const grocerySeed = [
     description:"a pound of bananas",
     category: "produce",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvGoVgPy-LinCzcrL1VnT3nIUIz2Yw3VuHP0YoHnnpUqhmwP0&s",
+    img: "https://i.imgur.com/IjWFTNr.png",
     width: "100px",
   },
   {
-    name: "Asparagus",
+    name: "Spinach",
     price: 2.99,
-    description:"a pound of asparagus",
+    description:"a pound of spinach",
     category: "produce",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2XJBVNirjstwiuVdTLXVBJUow7viJd_wBsgjUYu3Lfo6Nbms&s",
+    img: "https://i.imgur.com/MWnnhcw.png",
     width: "110px",
   },
   {
@@ -39,7 +39,7 @@ const grocerySeed = [
     description:"a package of strawberries",
     category: "produce",
     quantity: 10,
-    img: "https://media.istockphoto.com/photos/strawberries-picture-id174262076?k=6&m=174262076&s=612x612&w=0&h=p16FtlZj_ZN3erHL__A_UA8bDrq28GG9udj5lr4xiDc=",
+    img: "https://i.imgur.com/2Ch2kfN.png",
     width: "90px",
   },
   {
@@ -48,7 +48,7 @@ const grocerySeed = [
     description:"a pound of tomatoes",
     category: "produce",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL4Q94pUs0abcGuNV6euUHJQRL3Vj0msp0-eCjHsdr8Zp1G5I&s",
+    img: "https://i.imgur.com/1xXpSGj.png",
     width: "100px",
   },
   {
@@ -57,7 +57,7 @@ const grocerySeed = [
     description:"a gallon of milk",
     category: "dairy",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThq00_JkSIRtN_Aa7pEwplx1w8gaZpw_5prmss4UprfE2qAlE&s",
+    img: "https://i.imgur.com/EjELFip.png",
   
   },
   {
@@ -66,7 +66,7 @@ const grocerySeed = [
     description:"6oz of yogurt",
     category: "dairy",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ03skB9xzedXVGjh-EkM8KOnsRKwGx3TVPiynNkbIdqJzRnQ8&s",
+    img: "https://i.imgur.com/NEwAAf4.png",
     width: "70px",
   },
   {
@@ -75,7 +75,7 @@ const grocerySeed = [
     description:"a pound of cheese",
     category: "dairy",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYojVpgKY5AubxohRD6FdguhWMVVxXm12XvBtaVPjJSb796yij&s",
+    img: "https://i.imgur.com/fYNEs6U.png",
     width: "80px",
   },
   {
@@ -84,16 +84,16 @@ const grocerySeed = [
     description:"a stick of butter",
     category: "dairy",
     quantity: 10,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS61_wBFP_2-dW-asYEViq0eRjDDpVpon6aUVBqiXNpIIfvupY&s",
+    img: "https://i.imgur.com/cdtbZvt.png",
     width: "100px",
   },
   {
-    name: "Strawberry Ice Cream",
+    name: "Ice Cream",
     price: 5.99,
     description:"48oz tub of ice cream",
     category: "dairy",
     quantity: 10,
-    img: "https://media.istockphoto.com/vectors/icecream-inside-the-disposable-cup-vector-id512476873?k=6&m=512476873&s=612x612&w=0&h=rjs_NsSA8d6IH3D2unZsPcpSKuzJl6mEOCm_DHUVMlI=",
+    img: "https://i.imgur.com/n47KkAu.png",
     width: "60px",
   },
   {
@@ -103,7 +103,7 @@ const grocerySeed = [
     category: "snacks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg0DfrWe8zpQCl6bgsgn-y2d1cjUQjvwT73nTesFByvERhv28&s",
+      "https://i.imgur.com/9OH2xxe.png",
     width: "100px",
   },
   {
@@ -113,7 +113,7 @@ const grocerySeed = [
     category: "snacks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk_A48eob5fwRsW4gx6jOQevrBiHAgcPYDhTOYyQh9He3zv9jA&s",
+      "https://i.imgur.com/SM3eL6j.png",
     width: "100px",
   },
   {
@@ -123,7 +123,7 @@ const grocerySeed = [
     category: "snacks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz70fpfrAOhHs5_jSJxftxJOPjnhASejJc56HXQoJQvi6mEx3W&s",
+      "https://i.imgur.com/PbnepMv.jpeg",
     width: "100px",
   },
   {
@@ -133,7 +133,7 @@ const grocerySeed = [
     category: "snacks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrS9JYO0xkcKDH5Ny_fbSXPRynWZdohRtgPkCLuTVT0xuJSnnt&s",
+      "https://i.imgur.com/72iGhXD.png",
     width: "100px",
   },
   {
@@ -143,7 +143,7 @@ const grocerySeed = [
     category: "snacks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUJVdtYIShOwCzj9KyPja-xQrBqWqMp801kx00CpT9u1PKp_n6&s",
+      "https://i.imgur.com/XTZ3Srp.png",
     width: "100px",
   },
   {
@@ -153,7 +153,7 @@ const grocerySeed = [
     category: "drinks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC3vH1FF8bNwMa2ani45H7wDAkLh929EFc8-Ed_3jbv5n9x5I&s",
+      "https://i.imgur.com/Te8WvDZ.png",
     width: "",
   },
   {
@@ -163,8 +163,8 @@ const grocerySeed = [
     category: "drinks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSueRHhUHbaVXge8ZOyXaa7yoSampgTQdLGSuAMZTJl9apq84Bt&s",
-    width: "100px",
+      "https://i.imgur.com/uNETQei.png",
+    width: "80px",
   },
   {
     name: "Red Bull",
@@ -173,7 +173,7 @@ const grocerySeed = [
     category: "drinks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpMnKOqsqQ1iFllGdOA83jbx2132cVlyJGUEjcSzuniCPIKA7U&s",
+      "https://i.imgur.com/0KON4HM.png",
     width: "100px",
   },
   {
@@ -183,7 +183,7 @@ const grocerySeed = [
     category: "drinks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7TjMpWHa8Islj6rG8aJHHIpInDQpT-emReSMZw977LeQnUd2&s",
+      "https://i.imgur.com/sMdyVQY.png",
     width: "100px",
   },
   {
@@ -193,7 +193,7 @@ const grocerySeed = [
     category: "drinks",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMtMR49nixhIVgNVKpggT7K5aClT6h9swba2GaOLgebCZNaqA&s",
+      "https://i.imgur.com/gvGsfyc.png",
     width: "100px",
   },
   {
@@ -203,7 +203,7 @@ const grocerySeed = [
     category: "personal",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTFiCvOKgXJr8IrP8TIu-ASTs4qeGNeeTFw3S28l4KsoQzhpY&s",
+      "https://i.imgur.com/Dch7P3T.png",
     width: "100px",
   },
   {
@@ -213,7 +213,7 @@ const grocerySeed = [
     category: "personal",
     quantity: 10,
     img:
-      "https://www.pinclipart.com/picdir/big/222-2221147_original-solid-deodorant-secret-png-secret-deodorant-clipart.png",
+      "https://i.imgur.com/qqGdCNm.png",
     width: "100px",
   },
   {
@@ -223,7 +223,7 @@ const grocerySeed = [
     category: "personal",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR60gfGvzUf6z4zRMZ_qd7ficTR8gREq_aecNxZFN1_TmAuLbo&s",
+      "https://i.imgur.com/WwobrKU.png",
     width: "100px",
   },
   {
@@ -232,7 +232,7 @@ const grocerySeed = [
     description:"24oz bottle of shampoo",
     category: "personal",
     quantity: 10,
-    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKUBNco8zn2ntWuZ6c4ezc8UetNjpIpbIL3A&usqp=CAU",
+    img:"https://i.imgur.com/1GmDloc.png",
     width: "100px",
   },
   {
@@ -242,7 +242,7 @@ const grocerySeed = [
     category: "personal",
     quantity: 10,
     img:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjjhxPUBuQV25U6ezDYhkmtdHx0FUCNU2W-lvkz0_dlpbEwvCc&s",
+      "https://i.imgur.com/gTqWQej.png",
     width: "",
   },
 ];
