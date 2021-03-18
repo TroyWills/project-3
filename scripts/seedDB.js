@@ -99,7 +99,7 @@ const grocerySeed = [
   {
     name: "Potato Chips",
     price: 2.50,
-    description:"8oz bag of potato chips",
+    description:"15oz bag of potato chips",
     category: "snacks",
     quantity: 10,
     img:
@@ -109,7 +109,7 @@ const grocerySeed = [
   {
     name: "Chocolate Chip Cookies",
     price: 1.99,
-    description:"a 3 pack cookies",
+    description:"8oz pack cookies",
     category: "snacks",
     quantity: 10,
     img:
@@ -123,7 +123,7 @@ const grocerySeed = [
     category: "snacks",
     quantity: 10,
     img:
-      "https://i.imgur.com/PbnepMv.jpeg",
+      "https://i.imgur.com/EzOJAZB.png",
     width: "100px",
   },
   {
@@ -159,12 +159,12 @@ const grocerySeed = [
   {
     name: "Pepsi",
     price: 0.99,
-    description:"12oz can of pepsi",
+    description:"12oz bottle of pepsi",
     category: "drinks",
     quantity: 10,
     img:
       "https://i.imgur.com/uNETQei.png",
-    width: "80px",
+    // width: "80px",
   },
   {
     name: "Red Bull",
@@ -179,7 +179,7 @@ const grocerySeed = [
   {
     name: "Sprite",
     price: 0.99,
-    description:"12oz can of sprite",
+    description:"12oz bottle of sprite",
     category: "drinks",
     quantity: 10,
     img:
@@ -189,7 +189,7 @@ const grocerySeed = [
   {
     name: "Orange Juice",
     price: 1.99,
-    description:"12oz bottle of orange juice",
+    description:"1 gal. carton of orange juice",
     category: "drinks",
     quantity: 10,
     img:
@@ -198,8 +198,8 @@ const grocerySeed = [
   },
   {
     name: "Toilet Paper",
-    price: 3.99,
-    description:"6 rolls of toilet paper",
+    price: 10.99,
+    description:"12 rolls of toilet paper",
     category: "personal",
     quantity: 10,
     img:
@@ -238,7 +238,7 @@ const grocerySeed = [
   {
     name: "Tooth Brush",
     price: 2.99,
-    description:"3 pack toothbrush",
+    description:"7 pack toothbrush",
     category: "personal",
     quantity: 10,
     img:
