@@ -109,7 +109,7 @@ const grocerySeed = [
   {
     name: "Chocolate Chip Cookies",
     price: 1.99,
-    description:"8oz pack cookies",
+    description:"8oz package of cookies",
     category: "snacks",
     quantity: 10,
     img:

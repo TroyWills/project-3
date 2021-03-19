@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { getNumOfItemsInCart } from "../../utils/redux/cartSlice";
 import { Link } from "react-router-dom";
 
+
 function Navbar(props) {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
@@ -39,9 +40,12 @@ function Navbar(props) {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
+    
         <a className="navbar-brand" href="/">
+          
           The Mini Mart
         </a>
+     
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item dropdown">

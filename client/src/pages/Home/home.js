@@ -2,13 +2,16 @@
 import ItemCard from "../../components/Items/ItemCard"
 import "./style.css";
 import Fade from "react-reveal/Fade";
+import LightSpeed from "react-reveal/LightSpeed";
 
 const Home = (props) => {
 
   return (
     
     <div className="body">
+      <LightSpeed left>
       <div className="heading1">The Mini Mart</div>
+      </LightSpeed>
       <div className="items">
         {props.filteredProducts &&
           props.filteredProducts.map((product) => {
