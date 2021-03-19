@@ -17,6 +17,7 @@ Mini Mart was built on the following:
 - [Auth0](https://auth0.com/docs/)
 - [Express](https://expressjs.com/)
 - React-Toast-Notification
+- React-reveal (https://www.react-reveal.com/)
 ## Development
 
 Pull this repo and install the dependencies by running the following at the root of the directory:
